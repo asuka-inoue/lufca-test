@@ -226,7 +226,7 @@ button {
 .fv .kv-wrapper{
   height: 100vh;
 }
-.fv .kv-wrapper:befor {
+.fv .kv-wrapper::befor {
     content:"";
     display:block;
     position:fixed;
@@ -239,7 +239,7 @@ button {
     background-position:50% 100%;
     background-image:url('../images/0144.jpg');
     background-size:cover;
-
+}
   
 /*   background-image: url("../images/0144.jpg");
   min-height: 100%;
@@ -256,7 +256,7 @@ button {
   box-sizing: border-box;
   line-height: 1.5;
   position: relative; */
-}
+
 
 .fv .kv-wrapper .main-copy {
   font-size: 5rem;
