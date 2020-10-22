@@ -14,6 +14,7 @@ body {
   color: #333;
   font-family: "Playfair Display",serif;
   line-height: 2;
+  background-color: #fff;
 }
 
 img, svg {
@@ -223,7 +224,7 @@ button {
 /* ----------- */
 
 .fv .kv-wrapper{
-  height: 100vh
+  height: 100vh;
 }
 .fv .kv-wrapper::befor {
     content:"";
