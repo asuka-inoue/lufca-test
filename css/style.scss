@@ -27,6 +27,7 @@ a{
 }
 .section-wrapper {
   padding: 60px 0;
+  width: 100vw;
 }
 .section-inner{
   padding: 0 30px;
@@ -225,35 +226,22 @@ button{
 /* ----------- */
 .fv{
   .kv-wrapper{
-    background-image: url('../images/0144.jpg');
-    min-height: 100%;
     height: 100vh;
-    width: 100vw;
-    -webkit-background-size: cover !important; 
-    -moz-background-size: cover !important; 
-    -o-background-size: cover !important; 
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding: 0 50px;
-    box-sizing: border-box;
-    line-height: 1.5;   
-   
-//     &::before {
-// content:"";
-// display:block;
-// position:fixed;
-// top:0;
-// left:0;
-// z-index:-1;
-// width:100%;
-// height:100vh;
-// background-repeat:no-repeat;
-// background-position:50% 100%;
-// background-image:url(../images/0144.jpg);
-// background-size:cover;
-// }
+
+    &::before {
+      content:"";
+      display:block;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:-1;
+      width:100vw;
+      height:100vh;
+      background-repeat:no-repeat;
+      background-position: center;
+      background-image:url(../images/0144.jpg);
+      background-size:cover;
+      }
     .main-copy{
       font-size: 5rem;
       opacity: 1;
@@ -268,7 +256,6 @@ button{
   }
   .fadeout{
     opacity: 0;
-    transform: translate(0,10px) scale(1.02) rotate(-2deg);
     transition: 1s ease!important;
    
   }
@@ -316,7 +303,8 @@ button{
 /*  philosophy  */
 /* ----------- */
 #philosophy{
-  margin-top: 120px;
+  padding-top: 120px;
+  background: #fff;
   .flex{
     display: flex;
     margin-top: 60px;
@@ -414,6 +402,7 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 /*    price    */
 /* ----------- */
 #price{
+  background: #fff;
   .fb{
     display: flex;
     position: relative;
@@ -481,7 +470,7 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
           display: inline-block;
           position: absolute;
           top: 60px;
-          left: 120px;
+          left: 40%;
         }
           .color{
             top: 160px;
@@ -533,6 +522,7 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 /* ----------- */
 #staff{
   padding-top: 180px;
+  background: #fff;
   .section-inner{
     margin-left: 20%;
   
@@ -582,6 +572,16 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
   }
   }
 }
+}
+
+/* ------------ */
+/*    footer    */
+/* ------------ */
+footer{
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 30px 0;
 }
 
 /* ----------- */
@@ -765,7 +765,7 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 /* ----------- */
 #philosophy{
   margin-top: 0;
-  padding-top: 0;
+  padding: 0;
     .flex{
       display: block;
       margin-top: 0;
@@ -805,11 +805,18 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
     .menu-list{
       .menu-item{
         font-size: 4rem;
+        &:active{
         span{
+          animation: round .25s steps(14) forwards;
           left: 13vw;
+          top: 50px;
+        }
+        }
+        .cut{
+          top: 40px;
         }
         .color{
-          top: 120px;
+          top: 130px;
         }
         .perm{
           top: 210px
@@ -820,9 +827,9 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
         .treatment{
           top: 360px;
         }
-
       }
-    }
+      }
+    
     .img-list{
       margin-top: 0;
       .img-item{
@@ -868,6 +875,13 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
       }
     }
   }
+}
+
+/* --------------- */
+/*    footer-tb    */
+/* --------------- */
+footer{
+  padding: 60px 0;
 }
  }
 
@@ -982,7 +996,6 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 /* ----------- */
 #price {
   padding-top: 0;
-  margin-bottom: 100px;
   .section-inner{
     padding: 0;
   }
@@ -990,6 +1003,9 @@ animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
   .menu-list {
     .menu-item {
       font-size: 3rem;
+      span{
+        left: 33%;
+      }
       .cut{
         top: 35px;
       }
