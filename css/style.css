@@ -922,6 +922,9 @@ footer {
   #price .fb .menu-list .menu-item .treatment {
     top: 275px;
   }
+  #price .fb .text-item p {
+    font-size: 1.2rem;
+  }
   /* ----------- */
   /*   staff-sp  */
   /* ----------- */
