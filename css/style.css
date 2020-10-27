@@ -731,6 +731,18 @@ footer {
   padding: 30px 0;
 }
 
+
+@media (max-width: 1023px) {
+  #price .fb .fb-item .li-text .text-item img {
+    width: 200px;
+    height: 200px;
+  }
+  #price .fb .img-list .img-item img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /* ----------- */
 /*   base-tb   */
 /* ----------- */
