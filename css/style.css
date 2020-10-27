@@ -19,6 +19,7 @@ body {
 img, svg {
   width: 100%;
   vertical-align: bottom;
+  filter: drop-shadow(10px 10px 5px #064235);
 }
 
 a {
@@ -27,8 +28,9 @@ a {
 }
 
 .section-wrapper {
-  padding: 60px 0;
+  padding: 150px 0 60px;
   width: 100vw;
+  position: relative;
 }
 
 .section-inner {
@@ -37,19 +39,14 @@ a {
   margin: 0 auto;
 }
 
-.section-title {
-  text-transform: uppercase;
-  font-size: 5rem;
-  text-align: center;
-}
-
 .fadein {
-  text-align: center;
   font-size: 8rem;
-  font-weight: bold;
   opacity: .1;
   text-transform: uppercase;
   color: #ace5d6;
+  position: absolute;
+  z-index: 1;
+  top: 22vh;
 }
 
 .fadein.txt-effect {
@@ -61,6 +58,11 @@ a {
     opacity: .5;
     font-size: 10rem;
   }
+}
+
+.site-title {
+  width: 5%;
+  margin: 2%;
 }
 
 button {
@@ -76,21 +78,82 @@ button {
   display: none;
 }
 
+/* 非表示 */
+.is-hide {
+  display: none;
+}
+
+/* ローディング画面をフェードアウト */
+.fadeout-bg {
+  transition-property: opacity;
+  transition-delay: .9s;
+  transition-duration: .8s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ローダーをフェードアウト */
+.fadeout-loader {
+  transition-property: opacity;
+  transition-delay: .9s;
+  transition-duration: .3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ローディング画面 */
+#loader-bg {
+  background: #064235;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#loader {
+  height: 120px;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  position: fixed;
+  top: 50%;
+  width: 120px;
+}
+
+#loader p {
+  color: #fff;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#loader img {
+  display: inline-block;
+  width: 100px;
+  animation: LOGO-SCALE 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  filter: none;
+}
+
+@keyframes LOGO-SCALE {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* ----------- */
 /*   header    */
 /* ----------- */
 .header {
   position: fixed;
   z-index: 10;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
 }
 
-.header .heder-inner {
+.header .header-inner {
   display: flex;
 }
 
@@ -154,27 +217,24 @@ button {
   padding-right: 5px;
 }
 
-.header .header-link .icon-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.header .header-link .icon-item {
+  text-align: right;
+  margin-bottom: 5px;
 }
 
-.header .header-link .icon-list .icon-item {
-  margin-left: 20px;
+.header .header-link .icon-item img {
+  filter: none;
 }
 
-.header .header-link .icon-list a {
+.header .header-link .icon-item a {
   width: 30px;
   height: 30px;
   justify-content: center;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   transition: transform 0.3s ease-out;
 }
 
-.header .header-link .icon-list a:hover {
-  transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
-  opacity: 1;
+.header .header-link .icon-item a:hover {
+  opacity: .5;
 }
 
 .header .header-link .header-nav .nav-list {
@@ -249,7 +309,7 @@ button {
 }
 
 .fv .kv-wrapper .main-copy .copy1 {
-  height: 50vh;
+  height: 35vh;
 }
 
 .fv .kv-wrapper .main-copy .copy2 {
@@ -261,87 +321,19 @@ button {
   transition: 1s ease !important;
 }
 
-/* ----------- */
-/*   concept    */
-/* ----------- */
-.bg-white {
-  background: #fff;
+.fv .kv-wrapper .scroll {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  z-index: -1;
 }
 
-.bg-white .flex {
-  display: flex;
-  margin-top: 30px;
-  position: relative;
-}
-
-.bg-white .flex .concept-img {
-  width: 50%;
-}
-
-.bg-white .flex .concept-read {
-  width: 50%;
-  min-width: 450px;
-  position: absolute;
-  right: 1vw;
-  top: 3vh;
-  background: whitesmoke;
-  padding: 3%;
-}
-
-.bg-white .flex .concept-read p span {
-  font-size: 3.5rem;
-}
-
-.bg-white .flex .concept-read .concept-text {
-  font-size: 1.4rem;
-}
-
-.bg-white .flex .concept-read .concept-text .en {
-  display: inline-block;
-  margin-top: 15px;
-  line-height: 1.5;
-}
-
-/* ----------- */
-/*  philosophy  */
-/* ----------- */
-#philosophy {
-  padding-top: 120px;
-  background: #fff;
-}
-
-#philosophy .flex {
-  display: flex;
-  margin-top: 60px;
-  position: relative;
-}
-
-#philosophy .flex .flex-item {
-  width: 50%;
-}
-
-#philosophy .flex .flex-item .en-copy {
-  font-size: 3.5rem;
-  position: absolute;
-  left: 15vw;
-  top: 5vh;
-}
-
-#philosophy .flex .flex-item .ja-copy {
-  position: absolute;
-  bottom: 10vh;
-}
-
-#philosophy .flex .flex-img {
-  width: 80%;
-}
-
-#philosophy .c-scroll {
+.fv .kv-wrapper .scroll .c-scroll {
   text-align: center;
   margin-top: 5%;
 }
 
-#philosophy .c-scroll .c-scroll-arrow-line {
+.fv .kv-wrapper .scroll .c-scroll .c-scroll-arrow-line {
   position: relative;
   display: block;
   width: 1px;
@@ -350,7 +342,7 @@ button {
   overflow: hidden;
 }
 
-#philosophy .c-scroll .c-scroll-arrow-line:before {
+.fv .kv-wrapper .scroll .c-scroll .c-scroll-arrow-line:before {
   content: ' ';
   display: block;
   width: 1px;
@@ -360,7 +352,7 @@ button {
   border-style: solid;
 }
 
-#philosophy .c-scroll .c-scroll-arrow-top {
+.fv .kv-wrapper .scroll .c-scroll .c-scroll-arrow-top {
   display: block;
   width: 0;
   height: 0;
@@ -391,10 +383,111 @@ button {
 }
 
 /* ----------- */
+/*   concept    */
+/* ----------- */
+.bg-white {
+  background: #fff;
+}
+
+.bg-white .section-inner .img {
+  width: 15%;
+  margin-left: auto;
+}
+
+.bg-white .section-inner .img img {
+  filter: none;
+}
+
+.bg-white .section-inner .left {
+  margin-left: 0;
+}
+
+.bg-white .flex {
+  display: flex;
+  margin-top: 30px;
+}
+
+.bg-white .flex .concept-img {
+  width: 60%;
+  padding: 2% 0;
+  z-index: 2;
+}
+
+.bg-white .flex .concept-read {
+  width: 50%;
+  min-width: 450px;
+  padding: 0 3%;
+}
+
+.bg-white .flex .concept-read p span {
+  font-size: 3.5rem;
+}
+
+.bg-white .flex .concept-read .concept-text {
+  font-size: 1.4rem;
+}
+
+.bg-white .flex .concept-read .concept-text .en {
+  display: inline-block;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* ----------- */
+/*  philosophy  */
+/* ----------- */
+#philosophy {
+  padding-top: 120px;
+  background: #fff;
+}
+
+#philosophy .section-inner .img {
+  width: 15%;
+  margin-left: auto;
+  transform: rotate(38deg);
+}
+
+#philosophy .section-inner .img img {
+  filter: none;
+}
+
+#philosophy .flex {
+  display: flex;
+  margin-top: 60px;
+  position: relative;
+}
+
+#philosophy .flex .flex-item {
+  width: 50%;
+  z-index: 3;
+}
+
+#philosophy .flex .flex-item .en-copy {
+  font-size: 3.5rem;
+  position: absolute;
+  left: 15vw;
+  top: 5vh;
+}
+
+#philosophy .flex .flex-item .ja-copy {
+  position: absolute;
+  bottom: 10vh;
+}
+
+#philosophy .flex .flex-img {
+  width: 80%;
+  z-index: 2;
+}
+
+/* ----------- */
 /*    price    */
 /* ----------- */
 #price {
   background: #fff;
+}
+
+#price .price {
+  top: 5vh;
 }
 
 #price .fb {
@@ -413,6 +506,10 @@ button {
   margin-left: auto;
 }
 
+#price .fb .fb-item .fb-img img {
+  filter: none;
+}
+
 #price .fb .fb-item hr {
   border: dashed 1px #000;
 }
@@ -424,6 +521,12 @@ button {
   transform: translate(0, 0);
   transition: all 1s;
   text-align: right;
+}
+
+#price .fb .fb-item .li-text .text-item img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
 }
 
 #price .fb .fb-item .li-text .tab_hidden {
@@ -442,6 +545,13 @@ button {
   opacity: 1;
   transform: translate(0, 0);
   transition: all 1s;
+  z-index: 2;
+}
+
+#price .fb .img-list .img-item img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
 }
 
 #price .fb .img-list .tab_hidden {
@@ -484,12 +594,16 @@ button {
   top: 260px;
 }
 
-#price .fb .menu-list .menu-item .headspa {
+#price .fb .menu-list .menu-item .straight {
   top: 360px;
 }
 
-#price .fb .menu-list .menu-item .treatment {
+#price .fb .menu-list .menu-item .headspa {
   top: 460px;
+}
+
+#price .fb .menu-list .menu-item .treatment {
+  top: 560px;
 }
 
 #price .fb .menu-list .menu-item:hover span {
@@ -509,12 +623,22 @@ button {
 /*    staff    */
 /* ----------- */
 #staff {
-  padding-top: 180px;
+  padding-top: 120px;
   background: #fff;
 }
 
 #staff .section-inner {
   margin-left: 20%;
+}
+
+#staff .section-inner .img {
+  width: 15%;
+  margin-left: auto;
+  transform: rotate(38deg);
+}
+
+#staff .section-inner .img img {
+  filter: none;
 }
 
 #staff .section-inner .line {
@@ -530,6 +654,12 @@ button {
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
+}
+
+#staff .section-inner .flex .flex-list .left {
+  width: 10%;
+  margin-right: auto;
+  transform: rotate(-25deg);
 }
 
 #staff .section-inner .flex .flex-list .flex-item {
@@ -558,6 +688,37 @@ button {
   filter: none;
   filter: grayscale(0);
   transition: .3s;
+}
+
+/* ----------- */
+/*    map     */
+/* ----------- */
+#map {
+  background: white;
+}
+
+#map .flex {
+  display: flex;
+}
+
+#map .flex .map, #map .flex .access {
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+#map .flex .access {
+  margin: auto 0;
+}
+
+#map .flex .access table {
+  margin: 0 auto;
+}
+
+#map .flex .access table tr th, #map .flex .access table tr td {
+  vertical-align: top;
+  text-align: left;
+  padding: 3%;
+  letter-spacing: .06em;
 }
 
 /* ------------ */
@@ -697,9 +858,6 @@ footer {
   /* ----------- */
   /*   concept-tb    */
   /* ----------- */
-  .section-title {
-    font-size: 4rem;
-  }
   .bg-white .flex {
     flex-direction: column;
     position: unset;
@@ -772,22 +930,30 @@ footer {
   #price .fb .menu-list .menu-item .perm {
     top: 210px;
   }
-  #price .fb .menu-list .menu-item .headspa {
+  #price .fb .menu-list .menu-item .straight {
     top: 290px;
   }
-  #price .fb .menu-list .menu-item .treatment {
+  #price .fb .menu-list .menu-item .headspa {
     top: 360px;
+  }
+  #price .fb .menu-list .menu-item .treatment {
+    top: 440px;
   }
   #price .fb .img-list {
     margin-top: 0;
   }
   #price .fb .img-list .img-item {
-    width: 40%;
+    top: 0;
+  }
+  #price .fb .img-list .img-item img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
   }
   #price .fb .fb-item {
     width: 40%;
   }
-  #price .fb .fb-item .fb-img {
+  #price .fb .fb-item .scissors {
     width: 20%;
     margin-left: auto;
     position: absolute;
@@ -796,6 +962,11 @@ footer {
   #price .fb .fb-item .li-text .text-item {
     width: 40%;
     margin-top: 20%;
+  }
+  #price .fb .fb-item .li-text .text-item img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
   }
   /* ----------- */
   /*  staff-tb  */
@@ -916,11 +1087,14 @@ footer {
   #price .fb .menu-list .menu-item .perm {
     top: 160px;
   }
-  #price .fb .menu-list .menu-item .headspa {
+  #price .fb .menu-list .menu-item .straight {
     top: 210px;
   }
-  #price .fb .menu-list .menu-item .treatment {
+  #price .fb .menu-list .menu-item .headspa {
     top: 275px;
+  }
+  #price .fb .menu-list .menu-item .treatment {
+    top: 330px;
   }
   #price .fb .text-item p {
     font-size: 1.2rem;
