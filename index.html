@@ -15,27 +15,35 @@
   
 </head>
 <body>
+  <div id="loader-bg" class="is-hide">
+    <div id="loader" class="is-hide">
+     
+      <img src="./images/logo.jpeg" width="80" height="80" alt="Now Loading..." />
+      <p>Now Loading...</p>
+    </div>
+  </div>
+<div id="wrap">
   <!-- header -->
+
   <header class="header">
     <div class="header-inner">
       <h1 class="site-title">
         <a href="./index.html">
-<!--     logo       -->
+         <img src="./images/logo.jpeg" alt="Lufca Hair">
         </a>
       </h1>
       <div class="right">
         <div class="header-link">
-          <div class="icon-list">
-<!--   インスタicon           -->
-              <a href="#!"><img src="" alt=""></a>     
+          <div class="icon-item">
+              <a href="https://www.instagram.com/lufca_hair_room/"><img src="./images/icon_062470_256.png" alt="Instagram"></a>     
           </div>
           <div class="header-nav">
             <ul class="nav-list">
               <li class="nav-item"><a href="./index.html">Home
                 <span></span></a></li>
-              <li class="nav-item"><a href="./index.html#price">Menu<span></span></a></li>
-              <li class="nav-item"><a href="./recruit.html">Recruit<span></span></a></li>
-              <li class="nav-item"><a href="#blog">Blog<span></span></a></li>
+              <li class="nav-item"><a href="#price">Menu<span></span></a></li>
+              <li class="nav-item"><a href="#recruit">Recruit<span></span></a></li>
+              <li class="nav-item"><a href="https://beauty.hotpepper.jp/slnH000302288/blog/">Blog<span></span></a></li>
             </ul>
           </div>
           <button class="burger-btn">
@@ -48,7 +56,7 @@
            </button>
         </div>
         <div class="link-btn">
-          <a href="">
+          <a href="https://beauty.hotpepper.jp/slnH000302288/coupon/">
           <span class="btn-text">Reservation</span></a>
         </div>
       </div>
@@ -65,15 +73,24 @@
           <p class="copy1">One step</p>
           <p class="copy2">ahead...</p>
         </div>
+        <div class="scroll">
+          <div class="c-scroll">
+            <p class="c-scroll-text">scroll</p>
+            <span class="c-scroll-arrow-line"></span>
+            <span class="c-scroll-arrow-top"></span>
+          </div>
+        </div> 
       </div>
-      
     </div>
     <!-- //fv -->
 
    <!-- concept -->
     <section class="section-wrapper bg-white">
       <div class="section-inner">
-          <h2 class="section-title">Concept</h2>
+        <h2 class="fadein concept">Concept</h2>
+          <div class="img">
+            <img src="./images/img3.png" alt="アイロン">
+          </div>
           <div class="flex">
             <div class="concept-img">
               <img src="./images/0243.jpg" alt="">
@@ -94,13 +111,19 @@
               </div>
             </div>
           </div>
+          <div class="img left">
+            <img src="./images/img4.png" alt="くし">
+          </div>
         </div>
       </section>
       <!-- //concept -->
       <!-- philosophy -->
       <section class="section-wrapper" id="philosophy">
         <div class="section-inner">
-          <h2 class="fadein">Philosophy</h2>
+          <h2 class="fadein philosophy">Philosophy</h2>
+          <div class="img">
+            <img src="./images/img2.jpg" alt="bag">
+           </div>
           <div class="flex">
             <div class="flex-item">
               <p class="en-copy">"Dream" and "Impress"</p>
@@ -111,24 +134,17 @@
             </div>
           </div>
         </div>
-          <div class="scroll">
-            <div class="c-scroll">
-              <p class="c-scroll-text">scroll</p>
-              <span class="c-scroll-arrow-line"></span>
-              <span class="c-scroll-arrow-top"></span>
-            </div>
-          </div> 
       </section>
       <!-- //philosophy -->
     
       <!-- price -->
     <section class="section-wrapper" id="price">
       <div class="section-inner">
-        <h2 class="fadein">Price</h2>
+        <h2 class="fadein price">Price</h2>
         <div class="fb">
           <div class="fb-item">
             <div class="fb-img">
-              <img src="./images/scissors.jpg" alt="">
+              <img class="scissors" src="./images/scissors.jpg" alt="">
             </div>
             
             <ul class="li-text"> 
@@ -140,7 +156,7 @@
                 幼稚園・小学生以下 30%off  
                 </p>
                 <hr>
-                <img src="./images/0206.jpg" alt="">
+                <img src="./images/cut1.jpeg" alt="cut-image">
               </li> 
               <li class="text-item tab_hidden">
                 <hr>
@@ -151,19 +167,25 @@
                 ブリーチ1回 ¥7,000+tax<br>
                 </p>
                 <hr>
-                <img src="./images/0217.jpg" alt=""></li>
+                <img src="./images/color1.jpeg" alt="color-image"></li>
               <li class="text-item tab_hidden">
                 <hr>
                 <p>
                 コスメパーマ ￥6000+tax<br>
                 クリープパーマ ￥8000+tax<br>
-                ポイントパーマ ￥2000+tax〜<br><br>
-                コスメストレート ¥6,000+tax<br>
-                縮毛矯正 ¥14,000+tax<br>
-                ポイントストレート ¥3,000+tax〜
+                ポイントパーマ ￥2000+tax〜<br> 
                 </p>
                 <hr>
-                <img src="./images/0220.jpg" alt=""></li>
+                <img src="./images/perm1.jpeg" alt="perm-image"></li>
+              <li class="text-item tab_hidden">
+                  <hr>
+                  <p>
+                  コスメストレート ¥6,000+tax<br>
+                  縮毛矯正 ¥14,000+tax<br>
+                  ポイントストレート ¥3,000+tax〜
+                  </p>
+                  <hr>
+                  <img src="./images/straight1.jpeg" alt="straight"></li>
               <li class="text-item tab_hidden">
                 <hr>
                 <p>
@@ -173,7 +195,7 @@
                 ボタニカルスパ ￥5000+tax
                 </p>
                 <hr>
-                <img src="./images/DSC4706.jpg" alt=""></li>
+                <img src="./images/headspa1.jpeg" alt="head spa-image"></li>
               <li class="text-item tab_hidden">
                 <hr>
                 <p>
@@ -185,7 +207,7 @@
                 髪質改善トリートメント ¥10000+tax<br>
                 </p>
                 <hr>
-                <img src="./images/0249.jpg" alt=""></li>
+                <img src="./images/treatment1.jpeg" alt="treatment-image"></li>
             </ul>
           </div>
           <div class="fb-item">
@@ -194,17 +216,19 @@
                <li class="menu-item"><p>cut<span class="cut"></span></p></li>
               <li class="menu-item"><p>color<span class="color"></span></p></li>
               <li class="menu-item"><p>perm<span class="perm"></span></p></li>
+              <li class="menu-item"><p>straight<span class="straight"></span></p></li>
               <li class="menu-item"><p>head spa<span class="headspa"></span></p></li>
               <li class="menu-item"><p>Treatment<span class="treatment"></span></p></li>    
             </ul>
           </div>
           <div class="fb-item">
             <ul class="img-list">
-              <li class="img-item"><img src="./images/DSC4668.jpg" alt=""></li>
-              <li class="img-item tab_hidden"><img src="./images/DSC4714.jpg" alt=""></li>
-              <li class="img-item tab_hidden"><img src="./images/DSC4673.jpg" alt=""></li>
-              <li class="img-item tab_hidden"><img src="./images/DSC4675.jpg" alt=""></li>
-              <li class="img-item tab_hidden"><img src="./images/DSC4677.jpg" alt=""></li>
+              <li class="img-item"><img src="./images/cut2.jpeg" alt="cut-image"></li>
+              <li class="img-item tab_hidden"><img src="./images/color2.jpeg" alt="color-image"></li>
+              <li class="img-item tab_hidden"><img src="./images/perm2.jpeg" alt="perm-image"></li>
+              <li class="img-item tab_hidden"><img src="./images/straight2.jpeg" alt="straight-image"></li>
+              <li class="img-item tab_hidden"><img src="./images/headspa2.jpeg" alt="head spa-image"></li>
+              <li class="img-item tab_hidden"><img src="./images/treatment2.jpeg" alt="treatment-image"></li>
             </ul>
           </div>
          </div>
@@ -215,7 +239,9 @@
     <section class="section-wrapper" id="staff">
       <div class="section-inner">
         <h2 class="line">Staff</h2>
-        <img src="" alt="">
+        <div class="img">
+         <img src="./images/img1.jpg" alt="ドライヤー">
+        </div>
         <div class="flex">
           <ul class="flex-list">
             <li class="flex-item">
@@ -242,13 +268,60 @@
               </div>
               <p></p>
             </li>
+            <div class="img left">
+              <img src="./images/img5.jpg" alt="道具">
+            </div>
           </ul>
+          
         </div>
       </div>
     </section>
     <!-- //staff -->
-    
 
+    <!-- map -->
+    <section class="section-wrapper" id="map">
+        <div class="flex">
+          <div class="map">
+            <img src="./images/image0.png" alt="map">
+          </div>
+          <div class="access">
+            <table>
+              <tbody>
+                <tr>
+                  <th>Address</th>
+                  <td>
+                      <p>〒134-0088 東京都江戸川区西葛西6丁目22-17金万ビル2F</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Tel</th>
+                  <td>
+                      <p>03-6808-8776</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Hours</th>
+                  <td>
+                      <p>Mon-Sat AM10:00-PM08:00<br>
+                        Sun & Public Holiday AM 9:00 - PM 6:00</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Close</th>
+                  <td>
+                      <p>Every Tuesday & 1st and 3rd Mondays</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </section>
+  </main>
+    <footer>
+      <small>Copyright © Lufca Hair. Allright Reserved</small>
+    </footer>
+  </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./js/script.js"></script>
