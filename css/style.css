@@ -620,7 +620,7 @@ button {
   top: 560px;
 }
 
-#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item:focus span {
+#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item:active span {
   animation: round 0.25s steps(14) forwards;
 }
 
@@ -631,6 +631,10 @@ button {
   100% {
     background-position: 0 -812px;
   }
+}
+
+#price .fb .menu-list .tab_hidden span {
+  opacity: 0;
 }
 
 /* ----------- */
@@ -840,6 +844,9 @@ footer {
     display: block;
     width: 4%;
   }
+  .header .right .header-link .nav-list .icon:hover, .header .right .header-link .nav-list .icon:active {
+    opacity: .5;
+  }
   .header .right .header-link .nav-list .icon img {
     filter: none;
   }
@@ -916,7 +923,7 @@ footer {
   /*   fv-tb    */
   /* ----------- */
   .fv .kv-wrapper::before {
-    background-size: auto 80%;
+    background-size: auto 90%;
   }
   .fv .kv-wrapper .main-copy {
     padding: 60% 10% 0;
@@ -993,9 +1000,6 @@ footer {
     left: 13vw;
     top: 50px;
   }
-  #price .fb .menu-list .menu-item:click span {
-    animation: round 0.25s steps(14) forwards;
-  }
   #price .fb .menu-list .menu-item .cut {
     top: 40px;
   }
@@ -1051,6 +1055,9 @@ footer {
   /* ----------- */
   /*  staff-tb  */
   /* ----------- */
+  #staff {
+    padding-top: 20%;
+  }
   #staff .section-inner .line {
     font-size: 9rem;
     left: -10vw;
@@ -1058,6 +1065,16 @@ footer {
   #staff .section-inner .flex .flex-list .flex-item {
     width: 40%;
     filter: none;
+  }
+  /* --------------- */
+  /*      map-tb     */
+  /* --------------- */
+  #map .flex {
+    flex-direction: column;
+  }
+  #map .flex .map, #map .flex .access {
+    width: 90%;
+    margin: 0 auto;
   }
   /* --------------- */
   /*    footer-tb    */
