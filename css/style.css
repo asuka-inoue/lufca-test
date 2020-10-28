@@ -28,7 +28,7 @@ a {
 }
 
 .section-wrapper {
-  padding: 150px 0 60px;
+  padding: 60px 0;
   width: 100vw;
   position: relative;
 }
@@ -46,7 +46,7 @@ a {
   color: #ace5d6;
   position: absolute;
   z-index: 1;
-  top: 22vh;
+  top: 12vh;
 }
 
 .fadein.txt-effect {
@@ -61,8 +61,12 @@ a {
 }
 
 .site-title {
-  width: 5%;
-  margin: 2%;
+  width: 8%;
+  margin: 0 2%;
+}
+
+.site-title img {
+  filter: none;
 }
 
 button {
@@ -124,14 +128,16 @@ button {
 
 #loader p {
   color: #fff;
-  font-size: 10px;
+  font-size: 15px;
   line-height: 1.4;
   text-align: center;
 }
 
 #loader img {
   display: inline-block;
+  padding: 5%;
   width: 100px;
+  border-radius: 50%;
   animation: LOGO-SCALE 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
   filter: none;
 }
@@ -239,6 +245,10 @@ button {
 
 .header .header-link .header-nav .nav-list {
   display: flex;
+}
+
+.header .header-link .header-nav .nav-list .icon {
+  display: none;
 }
 
 .header .header-link .header-nav .nav-item {
@@ -392,6 +402,7 @@ button {
 .bg-white .section-inner .img {
   width: 15%;
   margin-left: auto;
+  transform: rotate(15deg);
 }
 
 .bg-white .section-inner .img img {
@@ -400,6 +411,7 @@ button {
 
 .bg-white .section-inner .left {
   margin-left: 0;
+  transform: rotate(-95deg);
 }
 
 .bg-white .flex {
@@ -415,7 +427,7 @@ button {
 
 .bg-white .flex .concept-read {
   width: 50%;
-  min-width: 450px;
+  min-width: 350px;
   padding: 0 3%;
 }
 
@@ -437,8 +449,11 @@ button {
 /*  philosophy  */
 /* ----------- */
 #philosophy {
-  padding-top: 120px;
   background: #fff;
+}
+
+#philosophy .philosophy {
+  top: 13vh;
 }
 
 #philosophy .section-inner .img {
@@ -487,7 +502,7 @@ button {
 }
 
 #price .price {
-  top: 5vh;
+  top: 0;
 }
 
 #price .fb {
@@ -521,12 +536,12 @@ button {
   transform: translate(0, 0);
   transition: all 1s;
   text-align: right;
+  z-index: 5;
 }
 
 #price .fb .fb-item .li-text .text-item img {
   object-fit: cover;
-  width: 300px;
-  height: 300px;
+  width: 100%;
 }
 
 #price .fb .fb-item .li-text .tab_hidden {
@@ -550,8 +565,7 @@ button {
 
 #price .fb .img-list .img-item img {
   object-fit: cover;
-  width: 300px;
-  height: 300px;
+  width: 100%;
 }
 
 #price .fb .img-list .tab_hidden {
@@ -606,7 +620,7 @@ button {
   top: 560px;
 }
 
-#price .fb .menu-list .menu-item:hover span {
+#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item:focus span {
   animation: round 0.25s steps(14) forwards;
 }
 
@@ -731,15 +745,37 @@ footer {
   padding: 30px 0;
 }
 
-
 @media (max-width: 1023px) {
-  #price .fb .fb-item .li-text .text-item img {
-    width: 200px;
-    height: 200px;
+  .fadein {
+    top: 9vh;
   }
-  #price .fb .img-list .img-item img {
-    width: 200px;
-    height: 200px;
+  #philosophy .philosophy {
+    top: 11vh;
+  }
+  #price .price {
+    top: -3vh;
+  }
+  #price .fb .menu-list .menu-item {
+    font-size: 4rem;
+  }
+  #price .fb .menu-list .menu-item span {
+    top: 53px;
+    left: 40%;
+  }
+  #price .fb .menu-list .menu-item .color {
+    top: 130px;
+  }
+  #price .fb .menu-list .menu-item .perm {
+    top: 210px;
+  }
+  #price .fb .menu-list .menu-item .straight {
+    top: 290px;
+  }
+  #price .fb .menu-list .menu-item .headspa {
+    top: 370px;
+  }
+  #price .fb .menu-list .menu-item .treatment {
+    top: 450px;
   }
 }
 
@@ -750,9 +786,14 @@ footer {
   body {
     font-size: 1.4rem;
   }
+  .site-title {
+    width: 8%;
+    margin: 1% 2%;
+  }
   .fadein {
     margin-bottom: 0;
     font-size: 4rem;
+    top: 10vh;
   }
   @keyframes txtEffect {
     100% {
@@ -777,6 +818,9 @@ footer {
   .header .right {
     width: 90vw;
   }
+  .header .right .header-link .icon-item {
+    display: none;
+  }
   .header .right .header-link .header-nav {
     display: none;
     position: fixed;
@@ -791,6 +835,13 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .header .right .header-link .nav-list .icon {
+    display: block;
+    width: 4%;
+  }
+  .header .right .header-link .nav-list .icon img {
+    filter: none;
   }
   .header .right .header-link .nav-item {
     margin: 0 0 30px;
@@ -848,6 +899,9 @@ footer {
     transform: rotate(-45deg) translate(4px, -4px);
     transition: .3s;
   }
+  .header .right .header-link .burger-btn.cross .link-btn {
+    width: 100%;
+  }
   .header .right .link-btn {
     position: fixed;
     bottom: 0;
@@ -861,11 +915,17 @@ footer {
   /* ----------- */
   /*   fv-tb    */
   /* ----------- */
+  .fv .kv-wrapper::before {
+    background-size: auto 80%;
+  }
   .fv .kv-wrapper .main-copy {
-    padding: 70% 15% 0;
+    padding: 60% 10% 0;
   }
   .fv .kv-wrapper .main-copy .copy1 {
     height: 20vh;
+  }
+  .fv .kv-wrapper .scroll {
+    bottom: 60px;
   }
   /* ----------- */
   /*   concept-tb    */
@@ -889,13 +949,13 @@ footer {
   /* ----------- */
   /*  philosophy-tb  */
   /* ----------- */
-  #philosophy {
-    margin-top: 0;
-    padding: 0;
+  #philosophy .philosophy {
+    top: 5vh;
   }
   #philosophy .flex {
     display: block;
     margin-top: 0;
+    z-index: 2;
   }
   #philosophy .flex .flex-item {
     width: 100%;
@@ -904,6 +964,7 @@ footer {
     color: black;
     background: rgba(255, 255, 255, 0.5);
     padding: 0 1%;
+    z-index: 3;
   }
   #philosophy .flex .flex-item .en-copy {
     right: 0;
@@ -916,22 +977,24 @@ footer {
   #philosophy .flex .flex-img {
     width: 100%;
   }
-  .c-scroll {
-    margin-top: 10%;
-  }
   /* ----------- */
   /*  price-tb  */
   /* ----------- */
+  #price .price {
+    top: -4vh;
+  }
   #price .fb {
     flex-wrap: wrap-reverse;
   }
   #price .fb .menu-list .menu-item {
     font-size: 4rem;
   }
-  #price .fb .menu-list .menu-item:active span {
-    animation: round 0.25s steps(14) forwards;
+  #price .fb .menu-list .menu-item span {
     left: 13vw;
     top: 50px;
+  }
+  #price .fb .menu-list .menu-item:click span {
+    animation: round 0.25s steps(14) forwards;
   }
   #price .fb .menu-list .menu-item .cut {
     top: 40px;
@@ -954,11 +1017,16 @@ footer {
   #price .fb .img-list {
     margin-top: 0;
   }
+  #price .fb .img-list .tab_hidden {
+    transform: translate(-30px, 0);
+  }
   #price .fb .img-list .img-item {
     top: 0;
+    width: 40%;
+    text-align: end;
   }
   #price .fb .img-list .img-item img {
-    object-fit: cover;
+    object-fit: contain;
     width: 200px;
     height: 200px;
   }
@@ -973,19 +1041,16 @@ footer {
   }
   #price .fb .fb-item .li-text .text-item {
     width: 40%;
-    margin-top: 20%;
+    top: 200px;
   }
   #price .fb .fb-item .li-text .text-item img {
-    object-fit: cover;
+    object-fit: contain;
     width: 200px;
     height: 200px;
   }
   /* ----------- */
   /*  staff-tb  */
   /* ----------- */
-  #staff {
-    padding-top: 32%;
-  }
   #staff .section-inner .line {
     font-size: 9rem;
     left: -10vw;
@@ -1006,6 +1071,10 @@ footer {
 /*   base-sp   */
 /* ----------- */
 @media (max-width: 480px) {
+  .site-title {
+    width: 15%;
+    margin: 5%;
+  }
   .fadein {
     margin-bottom: 0;
     font-size: 1rem;
@@ -1021,6 +1090,9 @@ footer {
   /* ----------- */
   .header .right .header-link .burger-btn .menu {
     right: 7vw;
+  }
+  .header .right .header-link .nav-list .icon {
+    width: 7%;
   }
   /* ----------- */
   /*    fv-sp    */
@@ -1108,8 +1180,21 @@ footer {
   #price .fb .menu-list .menu-item .treatment {
     top: 330px;
   }
-  #price .fb .text-item p {
+  #price .fb .fb-item .li-text .text-item {
+    top: 150px;
+  }
+  #price .fb .fb-item .li-text .text-item img {
+    object-fit: contain;
+    width: 150px;
+    height: 150px;
+  }
+  #price .fb .fb-item .li-text .text-item p {
     font-size: 1.2rem;
+  }
+  #price .fb .img-list .img-item img {
+    object-fit: contain;
+    width: 150px;
+    height: 150px;
   }
   /* ----------- */
   /*   staff-sp  */
