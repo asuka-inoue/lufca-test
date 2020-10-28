@@ -275,7 +275,9 @@ button {
 .header .header-link .header-nav .nav-item:hover span {
   animation: round 0.25s steps(14) forwards;
 }
-
+.header .header-link .header-nav .nav-item:active span {
+  animation: round 0.25s steps(14) forwards;
+}
 @keyframes round {
   0% {
     background-position: 0 0;
