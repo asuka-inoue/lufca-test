@@ -272,12 +272,10 @@ button {
   left: -5px;
 }
 
-.header .header-link .header-nav .nav-item:hover span {
+.header .header-link .header-nav .nav-item:hover span, .header .header-link .header-nav .nav-item:active span {
   animation: round 0.25s steps(14) forwards;
 }
-.header .header-link .header-nav .nav-item:active span {
-  animation: round 0.25s steps(14) forwards;
-}
+
 @keyframes round {
   0% {
     background-position: 0 0;
@@ -285,6 +283,10 @@ button {
   100% {
     background-position: 0 -812px;
   }
+}
+
+.header .header-link .header-nav.active {
+  display: block;
 }
 
 .header .header-link .burger-btn {
@@ -635,10 +637,6 @@ button {
   }
 }
 
-#price .fb .menu-list .tab_hidden span {
-  opacity: 0;
-}
-
 /* ----------- */
 /*    staff    */
 /* ----------- */
@@ -852,17 +850,17 @@ footer {
   .header .right .header-link .nav-list .icon img {
     filter: none;
   }
-  .header .right .header-link .nav-item {
+  .header .right .header-link .nav-list .nav-item {
     margin: 0 0 30px;
   }
-  .header .right .header-link .nav-item a {
+  .header .right .header-link .nav-list .nav-item a {
     font-size: 2rem;
     text-align: center;
   }
-  .header .right .header-link .nav-item:active span {
+  .header .right .header-link .nav-list .nav-item:active span {
     animation: round 0.25s steps(14) forwards;
   }
-  .header .right .header-link .nav-item:last-of-type {
+  .header .right .header-link .nav-list .nav-item:last-of-type {
     margin-bottom: 0;
   }
   .header .right .header-link .burger-btn {
@@ -1129,6 +1127,9 @@ footer {
   /* ------------- */
   /*  concept-sp   */
   /* ------------- */
+  .bg-white {
+    padding-bottom: 0;
+  }
   .bg-white .flex .concept-img {
     width: 100%;
   }
@@ -1169,11 +1170,8 @@ footer {
   /* ----------- */
   /*   price-sp  */
   /* ----------- */
-  #price {
-    padding-top: 0;
-  }
-  #price .section-inner {
-    padding: 0;
+  #price .price {
+    top: 1vh;
   }
   #price .fb .menu-list .menu-item {
     font-size: 3rem;
@@ -1218,6 +1216,9 @@ footer {
   /* ----------- */
   /*   staff-sp  */
   /* ----------- */
+  #staff {
+    padding-top: 30%;
+  }
   #staff .section-inner {
     margin-left: 15%;
   }
