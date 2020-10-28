@@ -40,16 +40,27 @@ $(".menu-item").click(function() {
 $('.burger-btn').on('click',function(){
   $('.header-nav').fadeToggle(300);
   $(this).toggleClass('cross');
+  if ($(this).hasClass('cross')) {
+    $('.header-nav').addClass('active');
+} else {
+    $('.header-nav').removeClass('active');
+}
 });
 
-$('.nav-list a').on('click', function() {
-      
-  $('.header-nav').slideToggle();
 
-  $('.header-nav').removeClass('active');
-
+$('.nav-list .nav-item a').on('click', function() { 
+  if($(window).width() < 769){
+    $('.header-nav').removeClass('active');
+    $('.header-nav').css({'display': 'none'});
+    $('.burger-btn').removeClass('cross');
+  }else{
+    $('.header-nav').css({'display': 'block'});
+    $('.header-nav').addClass('active');
+    $('.burger-btn').addClass('cross');
+  }
 });
 
+//ロード画面
 var bg = document.getElementById('loader-bg'),
     loader = document.getElementById('loader');
 /* ロード画面の非表示を解除 */
