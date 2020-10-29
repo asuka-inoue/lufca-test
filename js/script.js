@@ -35,8 +35,17 @@ $(".menu-item").click(function() {
   $(".text-item").eq(num).removeClass('tab_hidden');
   $(".img-item").eq(num).removeClass('tab_hidden');
   $(".menu-item").eq(num).addClass('active');
-
 });
+
+$(function(){
+  var clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
+      num = $(".menu-item").index(this);
+  $(document).on(clickEventType,'.menu-item',function(){
+    $(".menu-item").removeClass('active');
+    $(".menu-item").eq(num).addClass('active');
+  });
+});
+
 
 $(".nav-item").click(function(){
   var num = $(".nav-item").index(this);
