@@ -38,11 +38,10 @@ $(".menu-item").click(function() {
 });
 
 $(function(){
-  var clickEventType = (( window.ontouchstart!==null ) ? 'click':'touchend');
       num = $(".menu-item").index(this);
-  $(document).on(clickEventType,'.menu-item',function(){
-    $(".menu-item").removeClass('active');
-    $(".menu-item").eq(num).addClass('active');
+  $('.menu-item').on('touchstart',function(){
+  $(".menu-item").removeClass('active');
+  $(".menu-item").eq(num).addClass('active');
   });
 });
 
