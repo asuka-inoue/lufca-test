@@ -34,11 +34,11 @@ $('.menu-item').click(function() {
   $('.menu-item').removeClass('active');
   $('.text-item').eq(num).removeClass('tab_hidden');
   $('.img-item').eq(num).removeClass('tab_hidden');
-  $('.menu-item").eq(num).addClass('active');
+  $('.menu-item').eq(num).addClass('active');
 });
 
 $(function(){
-var  num = $(".menu-item").index(this);
+var  num = $('.menu-item').index(this);
   $('.menu-item').on('touchstart',function(){
   $('.menu-item').removeClass('active');
   $('.menu-item').eq(num).addClass('active');
