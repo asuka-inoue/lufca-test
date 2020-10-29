@@ -31,8 +31,17 @@ $(function(){
 $(".menu-item").click(function() {
   var num = $(".menu-item").index(this);
   $(".text-item,.img-item").addClass('tab_hidden');
+  $(".menu-item").removeClass('active');
   $(".text-item").eq(num).removeClass('tab_hidden');
   $(".img-item").eq(num).removeClass('tab_hidden');
+  $(".menu-item").eq(num).addClass('active');
+
+});
+
+$(".nav-item").click(function(){
+  var num = $(".nav-item").index(this);
+  $(".nav-item").removeClass('active');
+  $(".nav-item").eq(num).addClass('active');
 });
 
 
