@@ -580,7 +580,6 @@ button {
 
 #price .fb .menu-list {
   text-align: center;
-  position: relative;
 }
 
 #price .fb .menu-list p {
@@ -589,6 +588,7 @@ button {
 
 #price .fb .menu-list .menu-item {
   font-size: 5rem;
+  position: relative;
   cursor: pointer;
   text-decoration: none;
   color: black;
@@ -600,28 +600,8 @@ button {
   height: 58px;
   display: inline-block;
   position: absolute;
-  top: 60px;
+  top: 30px;
   left: 40%;
-}
-
-#price .fb .menu-list .menu-item .color {
-  top: 160px;
-}
-
-#price .fb .menu-list .menu-item .perm {
-  top: 260px;
-}
-
-#price .fb .menu-list .menu-item .straight {
-  top: 360px;
-}
-
-#price .fb .menu-list .menu-item .headspa {
-  top: 460px;
-}
-
-#price .fb .menu-list .menu-item .treatment {
-  top: 560px;
 }
 
 @keyframes round {
@@ -644,8 +624,9 @@ button {
   height: 58px;
   display: inline-block;
   position: absolute;
-  top: 60px;
+  top: 30px;
   left: 40%;
+  animation: round 0.25s steps(14) forwards;
 }
 
 /* ----------- */
@@ -777,20 +758,9 @@ footer {
     top: 53px;
     left: 40%;
   }
-  #price .fb .menu-list .menu-item .color {
-    top: 130px;
-  }
-  #price .fb .menu-list .menu-item .perm {
-    top: 210px;
-  }
-  #price .fb .menu-list .menu-item .straight {
-    top: 290px;
-  }
-  #price .fb .menu-list .menu-item .headspa {
-    top: 370px;
-  }
-  #price .fb .menu-list .menu-item .treatment {
-    top: 450px;
+  #price .fb .menu-list .menu-item.active::after {
+    top: 53px;
+    left: 40%;
   }
 }
 
@@ -1008,26 +978,12 @@ footer {
     font-size: 4rem;
   }
   #price .fb .menu-list .menu-item span {
-    left: 13vw;
-    top: 50px;
+    left: 15vw;
+    top: 20px;
   }
-  #price .fb .menu-list .menu-item .cut {
-    top: 40px;
-  }
-  #price .fb .menu-list .menu-item .color {
-    top: 130px;
-  }
-  #price .fb .menu-list .menu-item .perm {
-    top: 210px;
-  }
-  #price .fb .menu-list .menu-item .straight {
-    top: 290px;
-  }
-  #price .fb .menu-list .menu-item .headspa {
-    top: 360px;
-  }
-  #price .fb .menu-list .menu-item .treatment {
-    top: 440px;
+  #price .fb .menu-list .menu-item.active::after {
+    left: 15vw;
+    top: 20px;
   }
   #price .fb .img-list {
     margin-top: 0;
@@ -1189,24 +1145,11 @@ footer {
   }
   #price .fb .menu-list .menu-item span {
     left: 33%;
+    top: 4px;
   }
-  #price .fb .menu-list .menu-item .cut {
-    top: 35px;
-  }
-  #price .fb .menu-list .menu-item .color {
-    top: 80px;
-  }
-  #price .fb .menu-list .menu-item .perm {
-    top: 130px;
-  }
-  #price .fb .menu-list .menu-item .straight {
-    top: 180px;
-  }
-  #price .fb .menu-list .menu-item .headspa {
-    top: 230px;
-  }
-  #price .fb .menu-list .menu-item .treatment {
-    top: 280px;
+  #price .fb .menu-list .menu-item.active::after {
+    left: 33%;
+    top: 4px;
   }
   #price .fb .fb-item .li-text .text-item {
     top: 150px;
