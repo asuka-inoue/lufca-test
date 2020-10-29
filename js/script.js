@@ -37,10 +37,12 @@ $('.menu-item').click(function() {
   $('.menu-item").eq(num).addClass('active');
 });
 
+$(function(){
 var  num = $(".menu-item").index(this);
-  $('.menu-item').touchstart(function(){
+  $('.menu-item').on('touchstart',function(){
   $('.menu-item').removeClass('active');
   $('.menu-item').eq(num).addClass('active');
+  });
   });
 
 
