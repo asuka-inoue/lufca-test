@@ -28,28 +28,27 @@ $(function(){
 });
 
 
-$(".menu-item").click(function() {
-  var num = $(".menu-item").index(this);
-  $(".text-item,.img-item").addClass('tab_hidden');
-  $(".menu-item").removeClass('active');
-  $(".text-item").eq(num).removeClass('tab_hidden');
-  $(".img-item").eq(num).removeClass('tab_hidden');
-  $(".menu-item").eq(num).addClass('active');
+$('.menu-item').click(function() {
+  var num = $('.menu-item').index(this);
+  $('.text-item,.img-item').addClass('tab_hidden');
+  $('.menu-item').removeClass('active');
+  $('.text-item').eq(num).removeClass('tab_hidden');
+  $('.img-item').eq(num).removeClass('tab_hidden');
+  $('.menu-item").eq(num).addClass('active');
 });
 
-$(function(){
-      num = $(".menu-item").index(this);
-  $('.menu-item').on('touchstart',function(){
-  $(".menu-item").removeClass('active');
-  $(".menu-item").eq(num).addClass('active');
+var  num = $(".menu-item").index(this);
+  $('.menu-item').touchstart(function(){
+  $('.menu-item').removeClass('active');
+  $('.menu-item').eq(num).addClass('active');
   });
-});
 
 
-$(".nav-item").click(function(){
-  var num = $(".nav-item").index(this);
-  $(".nav-item").removeClass('active');
-  $(".nav-item").eq(num).addClass('active');
+
+$('.nav-item').click(function(){
+  var num = $('.nav-item').index(this);
+  $('.nav-item').removeClass('active');
+  $('.nav-item').eq(num).addClass('active');
 });
 
 
