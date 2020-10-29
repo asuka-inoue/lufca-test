@@ -274,6 +274,7 @@ button {
 
 .header .header-link .header-nav .nav-item:hover span, .header .header-link .header-nav .nav-item.active span {
   animation: round 0.25s steps(14) forwards;
+  cursor: pointer;
 }
 
 @keyframes round {
@@ -615,6 +616,7 @@ button {
 
 #price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item.active span {
   animation: round 0.25s steps(14) forwards;
+  cursor: pointer;
 }
 
 #price .fb .menu-list .menu-item.active::after {
@@ -627,6 +629,7 @@ button {
   top: 30px;
   left: 40%;
   animation: round 0.25s steps(14) forwards;
+  cursor: pointer;
 }
 
 /* ----------- */
