@@ -637,6 +637,17 @@ button {
   animation: round 0.25s steps(14) forwards;
 }
 
+#price .fb .menu-list .menu-item.active::after {
+  content: "";
+  background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
+  width: 58px;
+  height: 58px;
+  display: inline-block;
+  position: absolute;
+  top: 60px;
+  left: 40%;
+}
+
 /* ----------- */
 /*    staff    */
 /* ----------- */
