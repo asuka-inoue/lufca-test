@@ -272,7 +272,7 @@ button {
   left: -5px;
 }
 
-.header .header-link .header-nav .nav-item:hover span, .header .header-link .header-nav .nav-item:active span {
+.header .header-link .header-nav .nav-item:hover span, .header .header-link .header-nav .nav-item.active span {
   animation: round 0.25s steps(14) forwards;
 }
 
@@ -624,10 +624,6 @@ button {
   top: 560px;
 }
 
-#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item:active span {
-  animation: round 0.25s steps(14) forwards;
-}
-
 @keyframes round {
   0% {
     background-position: 0 0;
@@ -635,6 +631,10 @@ button {
   100% {
     background-position: 0 -812px;
   }
+}
+
+#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item.active span {
+  animation: round 0.25s steps(14) forwards;
 }
 
 /* ----------- */
