@@ -2,6 +2,12 @@
 /* 文字コードの指定
 ------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i);
+@font-face {
+  font-family: 'en-font';
+  src: url("../font/Dominik.ttf") format("truetype");
+  src: url("../font/Dominik Thin.ttf") format("truetype");
+}
+
 /* ----------- */
 /*     base    */
 /* ----------- */
@@ -12,7 +18,7 @@ html {
 body {
   font-size: 1.6rem;
   color: #333;
-  font-family: "Playfair Display",serif;
+  font-family: 'en-font';
   line-height: 2;
 }
 
@@ -41,12 +47,13 @@ a {
 
 .fadein {
   font-size: 8rem;
+  font-weight: bold;
   opacity: .1;
   text-transform: uppercase;
   color: #ace5d6;
   position: absolute;
   z-index: 1;
-  top: 12vh;
+  top: 13vh;
 }
 
 .fadein.txt-effect {
@@ -258,7 +265,7 @@ button {
 .header .header-link .header-nav .nav-item a {
   color: #000;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   position: relative;
 }
@@ -338,6 +345,7 @@ button {
 
 .fv .kv-wrapper .scroll {
   position: fixed;
+  font-weight: bold;
   bottom: 40px;
   width: 100%;
   z-index: -1;
@@ -440,6 +448,14 @@ button {
   font-size: 3.5rem;
 }
 
+.bg-white .flex .concept-read .ja {
+  font-family: "Playfair Display",serif;
+}
+
+.bg-white .flex .concept-read .en {
+  font-weight: bold;
+}
+
 .bg-white .flex .concept-read .concept-text {
   font-size: 1.4rem;
 }
@@ -458,7 +474,7 @@ button {
 }
 
 #philosophy .philosophy {
-  top: 13vh;
+  top: 14vh;
 }
 
 #philosophy .section-inner .img {
@@ -492,6 +508,7 @@ button {
 #philosophy .flex .flex-item .ja-copy {
   position: absolute;
   bottom: 10vh;
+  font-family: "Playfair Display",serif;
 }
 
 #philosophy .flex .flex-img {
@@ -535,6 +552,7 @@ button {
 }
 
 #price .fb .fb-item .li-text .text-item {
+  font-family: "Playfair Display",serif;
   position: absolute;
   width: 30%;
   opacity: 1;
@@ -687,6 +705,7 @@ button {
   width: 100%;
   padding-top: 139.6%;
   position: relative;
+  margin-bottom: 10px;
 }
 
 #staff .section-inner .flex .flex-list .flex-item .flex-img img {
@@ -732,6 +751,11 @@ button {
   text-align: left;
   padding: 3%;
   letter-spacing: .06em;
+  font-weight: bold;
+}
+
+#map .flex .access table tr th p, #map .flex .access table tr td p {
+  font-family: "Playfair Display",serif;
 }
 
 /* ------------ */
@@ -775,8 +799,8 @@ footer {
     font-size: 1.4rem;
   }
   .site-title {
-    width: 8%;
-    margin: 1% 2%;
+    width: 80px;
+    margin: 0 2%;
   }
   .fadein {
     margin-bottom: 0;
@@ -857,7 +881,6 @@ footer {
   .header .right .header-link .burger-btn .menu {
     display: block;
     font-size: 1rem;
-    font-family: "Playfair Display",serif;
     text-transform: uppercase;
     color: #333;
     font-weight: bold;
@@ -1058,10 +1081,6 @@ footer {
 /*   base-sp   */
 /* ----------- */
 @media (max-width: 480px) {
-  .site-title {
-    width: 15%;
-    margin: 5%;
-  }
   .fadein {
     margin-bottom: 0;
     font-size: 1rem;
