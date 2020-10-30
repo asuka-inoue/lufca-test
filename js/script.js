@@ -28,7 +28,7 @@ $(function(){
 });
 
 
-$('.menu-item').click(function() {
+$('.menu-item').on('click',function() {
   var num = $('.menu-item').index(this);
   $('.text-item,.img-item').addClass('tab_hidden');
   $('.menu-item').removeClass('active');
@@ -47,7 +47,7 @@ var  num = $('.menu-item').index(this);
 
 
 
-$('.nav-item').click(function(){
+$('.nav-item').on('click',function(){
   var num = $('.nav-item').index(this);
   $('.nav-item').removeClass('active');
   $('.nav-item').eq(num).addClass('active');
