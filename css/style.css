@@ -782,12 +782,12 @@ footer {
     font-size: 4rem;
   }
   #price .fb .menu-list .menu-item span {
-    top: 53px;
     left: 40%;
+    top: 10px;
   }
   #price .fb .menu-list .menu-item.active::after {
-    top: 53px;
     left: 40%;
+    top: 10px;
   }
 }
 
@@ -999,17 +999,6 @@ footer {
   }
   #price .fb {
     flex-wrap: wrap-reverse;
-  }
-  #price .fb .menu-list .menu-item {
-    font-size: 4rem;
-  }
-  #price .fb .menu-list .menu-item span {
-    left: 15vw;
-    top: 20px;
-  }
-  #price .fb .menu-list .menu-item.active::after {
-    left: 15vw;
-    top: 20px;
   }
   #price .fb .img-list {
     margin-top: 0;
