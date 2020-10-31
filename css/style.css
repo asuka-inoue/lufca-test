@@ -67,6 +67,37 @@ a {
   }
 }
 
+.fade-in {
+  transition: all 2s;
+  transform: translate(0, 100px);
+  opacity: 0;
+  font-size: 1.5rem;
+}
+
+.fade-in::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  top: 25px;
+  left: 15px;
+  z-index: -1;
+  background-size: 30px 30px;
+  background-image: linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+}
+
+.fade-in.in {
+  transform: translate(0, 0);
+  animation: in 2s both;
+}
+
+@keyframes in {
+  100% {
+    font-size: 2.3rem;
+    opacity: 1;
+  }
+}
+
 .site-title {
   width: 8%;
   margin: 0 2%;
@@ -410,6 +441,7 @@ button {
 /* ----------- */
 .bg-white {
   background: #fff;
+  padding-bottom: 0;
 }
 
 .bg-white .section-inner .img {
@@ -433,7 +465,8 @@ button {
 }
 
 .bg-white .flex .concept-img {
-  width: 60%;
+  width: 100%;
+  height: 100%;
   padding: 2% 0;
   z-index: 2;
 }
@@ -471,10 +504,11 @@ button {
 /* ----------- */
 #philosophy {
   background: #fff;
+  padding-top: 0;
 }
 
 #philosophy .philosophy {
-  top: 14vh;
+  top: 7vh;
 }
 
 #philosophy .section-inner .img {
@@ -511,9 +545,17 @@ button {
   font-family: "Playfair Display",serif;
 }
 
+#philosophy .flex .flex-item .ja-copy::before {
+  opacity: 0;
+}
+
 #philosophy .flex .flex-img {
   width: 80%;
   z-index: 2;
+}
+
+#philosophy .flex .flex-img::before {
+  height: 100%;
 }
 
 /* ----------- */
@@ -562,9 +604,22 @@ button {
   z-index: 5;
 }
 
-#price .fb .fb-item .li-text .text-item img {
+#price .fb .fb-item .li-text .text-item .text-item-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+  background-size: 30px 30px;
+  background-image: linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+}
+
+#price .fb .fb-item .li-text .text-item .text-item-img img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 #price .fb .fb-item .li-text .tab_hidden {
@@ -579,16 +634,28 @@ button {
 
 #price .fb .img-list .img-item {
   position: absolute;
-  width: 30%;
   opacity: 1;
   transform: translate(0, 0);
   transition: all 1s;
   z-index: 2;
 }
 
+#price .fb .img-list .img-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+  background-size: 30px 30px;
+  background-image: linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+}
+
 #price .fb .img-list .img-item img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 #price .fb .img-list .tab_hidden {
@@ -636,19 +703,6 @@ button {
   animation: round 0.25s steps(14) forwards;
   cursor: pointer;
 }
-
-/* #price .fb .menu-list .menu-item.active::after {
-  content: "";
-  background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
-  width: 58px;
-  height: 58px;
-  display: inline-block;
-  position: absolute;
-  top: 30px;
-  left: 40%;
-  animation: round 0.25s steps(14) forwards;
-  cursor: pointer;
-} */
 
 /* ----------- */
 /*    staff    */
@@ -733,6 +787,10 @@ button {
   display: flex;
 }
 
+#map .flex img {
+  filter: none;
+}
+
 #map .flex .map, #map .flex .access {
   width: 50%;
   font-size: 1.5rem;
@@ -740,6 +798,9 @@ button {
 
 #map .flex .access {
   margin: auto 0;
+  padding: 30px 0;
+  background: #064235;
+  color: #fff;
 }
 
 #map .flex .access table {
@@ -785,10 +846,6 @@ footer {
     left: 40%;
     top: 10px;
   }
-  #price .fb .menu-list .menu-item.active::after {
-    left: 40%;
-    top: 10px;
-  }
 }
 
 /* ----------- */
@@ -811,6 +868,17 @@ footer {
     100% {
       opacity: .5;
       font-size: 7rem;
+    }
+  }
+  .fade-in {
+    transform: translate(0, 50px);
+    font-size: 1rem;
+    position: relative;
+  }
+  @keyframes in {
+    100% {
+      font-size: 1.4rem;
+      opacity: 1;
     }
   }
   /* -----------   */
@@ -1007,17 +1075,19 @@ footer {
     transform: translate(-30px, 0);
   }
   #price .fb .img-list .img-item {
-    top: 0;
-    width: 40%;
-    text-align: end;
+    width: 72%;
+  }
+  #price .fb .img-list .img-item::before {
+    width: 100%;
+    height: 200px;
   }
   #price .fb .img-list .img-item img {
-    object-fit: contain;
-    width: 200px;
+    object-fit: cover;
+    width: 100%;
     height: 200px;
   }
   #price .fb .fb-item {
-    width: 40%;
+    width: 42%;
   }
   #price .fb .fb-item .scissors {
     width: 20%;
@@ -1026,8 +1096,7 @@ footer {
     right: 0;
   }
   #price .fb .fb-item .li-text .text-item {
-    width: 40%;
-    top: 200px;
+    top: 225px;
   }
   #price .fb .fb-item .li-text .text-item img {
     object-fit: contain;
@@ -1158,25 +1227,25 @@ footer {
     left: 33%;
     top: 4px;
   }
-  #price .fb .menu-list .menu-item.active::after {
-    left: 33%;
-    top: 4px;
-  }
   #price .fb .fb-item .li-text .text-item {
-    top: 150px;
+    top: 170px;
   }
   #price .fb .fb-item .li-text .text-item img {
     object-fit: contain;
-    width: 100px;
+    width: 100%;
     height: 150px;
   }
   #price .fb .fb-item .li-text .text-item p {
     font-size: 1.2rem;
   }
+  #price .fb .img-list .img-item::before {
+    height: 100%;
+  }
   #price .fb .img-list .img-item img {
-    object-fit: contain;
-    width: 100px;
+    object-fit: cover;
+    width: 100%;
     height: 150px;
+    max-height: 150px;
   }
   /* ----------- */
   /*   staff-sp  */
