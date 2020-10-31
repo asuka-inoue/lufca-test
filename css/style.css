@@ -637,7 +637,7 @@ button {
   cursor: pointer;
 }
 
-#price .fb .menu-list .menu-item.active::after {
+/* #price .fb .menu-list .menu-item.active::after {
   content: "";
   background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
   width: 58px;
@@ -648,7 +648,7 @@ button {
   left: 40%;
   animation: round 0.25s steps(14) forwards;
   cursor: pointer;
-}
+} */
 
 /* ----------- */
 /*    staff    */
