@@ -27,31 +27,25 @@ $(function(){
     });
 });
 
+$(function(){
+  $('.menu-item').on('click touchstart',function() {
+    var num = $('.menu-item').index(this);
+    $('.text-item,.img-item').addClass('tab_hidden');
+    $('.menu-item').removeClass('active');
+    $('.text-item').eq(num).removeClass('tab_hidden');
+    $('.img-item').eq(num).removeClass('tab_hidden');
+    $('.menu-item').eq(num).addClass('active');
+  });
+ });
 
-$('.menu-item').on('click',function() {
-  var num = $('.menu-item').index(this);
-  $('.text-item,.img-item').addClass('tab_hidden');
-  $('.menu-item').removeClass('active');
-  $('.text-item').eq(num).removeClass('tab_hidden');
-  $('.img-item').eq(num).removeClass('tab_hidden');
-  $('.menu-item').eq(num).addClass('active');
-});
 
 $(function(){
-var  num = $('.menu-item').index(this);
-  $('.menu-item').on('touchstart',function(){
-  $('.menu-item').removeClass('active');
-  $('.menu-item').eq(num).addClass('active');
+  $('.nav-item').on('click touchstart',function(){
+    var num = $('.nav-item').index(this);
+    $('.nav-item').removeClass('active');
+    $('.nav-item').eq(num).addClass('active');
   });
-  });
-
-
-
-$('.nav-item').on('click',function(){
-  var num = $('.nav-item').index(this);
-  $('.nav-item').removeClass('active');
-  $('.nav-item').eq(num).addClass('active');
-});
+ });
 
 
 // ハンバーガー メニュー
