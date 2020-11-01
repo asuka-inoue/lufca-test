@@ -25,7 +25,6 @@ body {
 img, svg {
   width: 100%;
   vertical-align: bottom;
-/*   filter: drop-shadow(10px 10px 5px #064235); */
 }
 
 a {
@@ -66,12 +65,7 @@ a {
     font-size: 10rem;
   }
 }
-@-webkit-keyframes txtEffect {
-  100% {
-    opacity: .5;
-    font-size: 10rem;
-  }
-}
+
 .fade-in {
   transition: all 2s;
   transform: translate(0, 100px);
@@ -87,15 +81,8 @@ a {
   top: 25px;
   left: 15px;
   z-index: -1;
-  -webkit-background-size: 30px 30px;
-    -moz-background-size: 30px 30px;
-    background-size: 30px 30px;
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #afafaf), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #17a2ff), color-stop(0.75, #17a2ff), color-stop(0.75, transparent), to(transparent));
-    background-image: -webkit-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
-    background-image: -moz-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
-    background-image: -ms-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
-    background-image: -o-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
-    background-image: linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+  background-image: linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
 }
 
 .fade-in.in {
@@ -109,12 +96,7 @@ a {
     opacity: 1;
   }
 }
-@-webkit-keyframes in {
-  100% {
-    font-size: 2.3rem;
-    opacity: 1;
-  }
-}
+
 .site-title {
   width: 8%;
   margin: 0 2%;
@@ -131,10 +113,6 @@ button {
   outline: none;
   padding: 0;
   appearance: none;
-}
-
-.sp-br {
-  display: none;
 }
 
 /* 非表示 */
@@ -340,14 +318,7 @@ button {
     background-position: 0 -812px;
   }
 }
- @-webkit-keyframes round {
-      0%{
-        background-position: 0 0;
-      }
-      100%{
-        background-position: 0 -812px;
-      }
-    }
+
 .header .header-link .header-nav.active {
   display: block;
 }
@@ -459,24 +430,7 @@ button {
     transform-origin: 0 100%;
   }
 }
-@-webkit-keyframes sdl {
-  0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
-  }
-  50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
-  }
-  50.1% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
-  }
-  100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
-  }
-  }
+
 /* ----------- */
 /*   concept    */
 /* ----------- */
@@ -574,16 +528,29 @@ button {
 }
 
 #philosophy .flex .flex-item .en-copy {
-  font-size: 3.5rem;
+  font-size: 1rem;
   position: absolute;
   left: 15vw;
   top: 5vh;
+  font-weight: bold;
+}
+
+#philosophy .flex .flex-item .en-copy::before {
+  opacity: 0;
+}
+
+@keyframes in {
+  100% {
+    font-size: 2.4rem;
+    opacity: 1;
+  }
 }
 
 #philosophy .flex .flex-item .ja-copy {
   position: absolute;
-  bottom: 10vh;
+  bottom: 5vh;
   font-family: "Playfair Display",serif;
+  text-shadow: 2px  2px 3px #fff, -2px  2px 3px #fff, 2px -2px 3px #fff, -2px -2px 3px #fff;
 }
 
 #philosophy .flex .flex-item .ja-copy::before {
@@ -593,10 +560,6 @@ button {
 #philosophy .flex .flex-img {
   width: 80%;
   z-index: 2;
-}
-
-#philosophy .flex .flex-img::before {
-  height: 100%;
 }
 
 /* ----------- */
@@ -653,16 +616,9 @@ button {
   top: 15px;
   left: 15px;
   z-index: -1;
-  -webkit-background-size: 30px 30px;
-          -moz-background-size: 30px 30px;
-          background-size: 30px 30px;
-          background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #afafaf), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #17a2ff), color-stop(0.75, #17a2ff), color-stop(0.75, transparent), to(transparent));
-          background-image: -webkit-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
-          background-image: -moz-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
-          background-image: -ms-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
-          background-image: -o-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
-          background-image: linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
-      }
+  background-size: 30px 30px;
+  background-image: linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+}
 
 #price .fb .fb-item .li-text .text-item .text-item-img img {
   object-fit: cover;
@@ -738,6 +694,11 @@ button {
   left: 40%;
 }
 
+#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item.active span {
+  animation: round 0.25s steps(14) forwards;
+  cursor: pointer;
+}
+
 @keyframes round {
   0% {
     background-position: 0 0;
@@ -745,18 +706,6 @@ button {
   100% {
     background-position: 0 -812px;
   }
-}
-@-webkit-keyframes round {
-          0%{
-            background-position: 0 0;
-          }
-          100%{
-            background-position: 0 -812px;
-          }
-        }
-#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item.active span {
-  animation: round 0.25s steps(14) forwards;
-  cursor: pointer;
 }
 
 /* ----------- */
@@ -935,12 +884,6 @@ footer {
       font-size: 7rem;
     }
   }
-  @-webkit-keyframes txtEffect {
-  100% {
-    opacity: .5;
-    font-size: 10rem;
-  }
-}
   .fade-in {
     transform: translate(0, 50px);
     font-size: 1rem;
@@ -948,16 +891,10 @@ footer {
   }
   @keyframes in {
     100% {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       opacity: 1;
     }
   }
-  @-webkit-keyframes in {
-  100% {
-    font-size: 1.4rem;
-    opacity: 1;
-  }
-}
   /* -----------   */
   /*   header-tb   */
   /* -----------   */
@@ -1098,42 +1035,31 @@ footer {
   }
   .bg-white .flex .concept-read {
     width: 80%;
-    position: unset;
+    position: relative;
     margin-left: auto;
     box-sizing: border-box;
+    font-weight: bold;
   }
-  .bg-white .flex .concept-read p span {
+  .bg-white .flex .concept-read .read {
+    position: absolute;
+    top: -12vh;
+    right: 0;
+    z-index: 3;
+    text-shadow: 2px  2px 3px #fff, -2px  2px 3px #fff, 2px -2px 3px #fff, -2px -2px 3px #fff;
+  }
+  .bg-white .flex .concept-read .read span {
     font-size: 3rem;
+  }
+  .bg-white .flex .concept-read .concept-text {
+    padding-top: 8%;
   }
   /* ----------- */
   /*  philosophy-tb  */
   /* ----------- */
   #philosophy .philosophy {
-    top: -3vh;
+    top: 5vh;
   }
-  #philosophy .flex {
-    display: block;
-    margin-top: 0;
-    z-index: 2;
-  }
-  #philosophy .flex .flex-item {
-    width: 100%;
-  }
-  #philosophy .flex .flex-item p {
-    color: black;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 0 1%;
-    z-index: 3;
-  }
-  #philosophy .flex .flex-item .en-copy {
-    right: 0;
-    text-align: center;
-    font-size: 3rem;
-  }
-  #philosophy .flex .flex-item .ja-copy {
-    left: 0;
-  }
-  #philosophy .flex .flex-img {
+  #philosophy .flex-img {
     width: 100%;
   }
   /* ----------- */
@@ -1148,14 +1074,6 @@ footer {
   #price .fb .menu-list .menu-item.active span {
     animation: round 0.25s steps(14) forwards;
     cursor: pointer;
-  }
-  @keyframes round {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 -812px;
-    }
   }
   #price .fb .img-list {
     margin-top: 0;
@@ -1238,10 +1156,10 @@ footer {
       font-size: 4rem;
     }
   }
-  @-webkit-keyframes txtEffect {
+  @keyframes in {
     100% {
-      opacity: .5;
-      font-size: 4rem;
+      font-size: 1.4rem;
+      opacity: 1;
     }
   }
   /* ----------- */
@@ -1264,7 +1182,7 @@ footer {
     padding: 35% 0;
   }
   .fv .kv-wrapper .main-copy .copy1 {
-    height: 40vh;
+    height: 50vh;
   }
   /* ------------- */
   /*  concept-sp   */
@@ -1272,41 +1190,34 @@ footer {
   .bg-white {
     padding-bottom: 0;
   }
+  .bg-white .flex .fade-in::before {
+    top: 15px;
+  }
   .bg-white .flex .concept-img {
-    width: 100%;
+    width: 60%;
   }
   .bg-white .flex .concept-read {
     min-width: 260px;
     width: 100%;
     margin: 2% auto;
-    box-sizing: border-box;
   }
-  .bg-white .flex .concept-read p span {
+  .bg-white .flex .concept-read .read {
+    position: absolute;
+    top: -7vh;
+  }
+  .bg-white .flex .concept-read .read span {
     font-size: 2rem;
   }
   /* --------------- */
   /*  philosophy-sp  */
   /* --------------- */
-  #philosophy .flex {
-    display: block;
-    margin-top: 0;
-  }
-  #philosophy .flex .flex-item {
-    width: 100%;
-  }
   #philosophy .flex .flex-item .en-copy {
-    font-size: 2rem;
+    top: 3vh;
   }
   #philosophy .flex .flex-item .ja-copy {
-    bottom: 3vh;
+    bottom: 0;
   }
-  #philosophy .flex .flex-item .ja-copy .sp-br {
-    display: block;
-  }
-  #philosophy .flex .flex-item .ja-copy span {
-    margin-left: 100px;
-  }
-  #philosophy .flex .flex-img {
+  #philosophy .flex .flex-item .flex-img {
     width: 100%;
   }
   /* ----------- */
