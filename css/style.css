@@ -1141,6 +1141,18 @@ footer {
   #price .fb {
     flex-wrap: wrap-reverse;
   }
+  #price .fb .menu-list .menu-item.active span {
+    animation: round 0.25s steps(14) forwards;
+    cursor: pointer;
+  }
+  @keyframes round {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 -812px;
+    }
+  }
   #price .fb .img-list {
     margin-top: 0;
   }
