@@ -11,6 +11,21 @@ $(window).scroll(function() {
   });
 });
 
+
+$(window).scroll(function() {
+  var windowH = $(window).height(),
+    scrollY = $(window).scrollTop();
+  $('.fade-in').each(function() {
+    var elPosition = $(this).offset().top;
+    if (scrollY > elPosition - windowH) {
+      $(this).addClass("in");
+    }else{
+      $(this).removeClass("in") ;
+  }
+  });
+});
+
+
 $(function(){
   var $win = $(window),
       $header = $('.header'),
