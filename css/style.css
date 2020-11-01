@@ -694,7 +694,11 @@ button {
   left: 40%;
 }
 
-#price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item.active span {
+#price .fb .menu-list .menu-item:hover span{
+  animation: round 0.25s steps(14) forwards;
+  cursor: pointer;
+}
+ #price .fb .menu-list .menu-item.active span::after {
   animation: round 0.25s steps(14) forwards;
   cursor: pointer;
 }
