@@ -1105,7 +1105,7 @@ footer {
   /*  philosophy-tb  */
   /* ----------- */
   #philosophy .philosophy {
-    top: 5vh;
+    top: -3vh;
   }
   #philosophy .flex {
     display: block;
