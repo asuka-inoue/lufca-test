@@ -704,8 +704,6 @@ button {
   height: 58px;
   display: inline-block;
   position: absolute;
-  top: 30px;
-  left: 40%;
   animation: round 0.25s steps(14) forwards;
   cursor: pointer;
 }
