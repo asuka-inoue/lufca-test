@@ -1140,6 +1140,9 @@ footer {
   #staff {
     padding-top: 25%;
   }
+  #staff .section-inner .img{
+    width: 20%;
+  }
   #staff .section-inner .line {
     font-size: 9rem;
     left: -10vw;
