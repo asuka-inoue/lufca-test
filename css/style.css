@@ -810,6 +810,12 @@ button {
   transition: .3s;
 }
 
+#staff .section-inner .flex .flex-list .flex-item .fade-in::before {
+  height: 100%;
+  top: 10px;
+  left: 12px;
+}
+
 #staff .section-inner .flex .flex-list .flex-item .flex-img {
   width: 100%;
   padding-top: 139.6%;
