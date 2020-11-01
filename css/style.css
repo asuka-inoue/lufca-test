@@ -66,7 +66,12 @@ a {
     font-size: 10rem;
   }
 }
-
+@-webkit-keyframes txtEffect {
+  100% {
+    opacity: .5;
+    font-size: 10rem;
+  }
+}
 .fade-in {
   transition: all 2s;
   transform: translate(0, 100px);
@@ -82,8 +87,15 @@ a {
   top: 25px;
   left: 15px;
   z-index: -1;
-  background-size: 30px 30px;
-  background-image: linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+  -webkit-background-size: 30px 30px;
+    -moz-background-size: 30px 30px;
+    background-size: 30px 30px;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #afafaf), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #17a2ff), color-stop(0.75, #17a2ff), color-stop(0.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
+    background-image: -ms-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
 }
 
 .fade-in.in {
@@ -97,7 +109,12 @@ a {
     opacity: 1;
   }
 }
-
+@-webkit-keyframes in {
+  100% {
+    font-size: 2.3rem;
+    opacity: 1;
+  }
+}
 .site-title {
   width: 8%;
   margin: 0 2%;
@@ -323,7 +340,14 @@ button {
     background-position: 0 -812px;
   }
 }
-
+ @-webkit-keyframes round {
+      0%{
+        background-position: 0 0;
+      }
+      100%{
+        background-position: 0 -812px;
+      }
+    }
 .header .header-link .header-nav.active {
   display: block;
 }
@@ -435,7 +459,24 @@ button {
     transform-origin: 0 100%;
   }
 }
-
+@-webkit-keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+  }
 /* ----------- */
 /*   concept    */
 /* ----------- */
@@ -612,9 +653,16 @@ button {
   top: 15px;
   left: 15px;
   z-index: -1;
-  background-size: 30px 30px;
-  background-image: linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
-}
+  -webkit-background-size: 30px 30px;
+          -moz-background-size: 30px 30px;
+          background-size: 30px 30px;
+          background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #afafaf), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #17a2ff), color-stop(0.75, #17a2ff), color-stop(0.75, transparent), to(transparent));
+          background-image: -webkit-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
+          background-image: -moz-linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
+          background-image: -ms-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%,#ace5d6 75%, transparent 75%, transparent);
+          background-image: -o-linear-gradient(45deg, #ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+          background-image: linear-gradient(45deg,#ace5d6 25%, transparent 25%, transparent 50%, #ace5d6 50%, #ace5d6 75%, transparent 75%, transparent);
+      }
 
 #price .fb .fb-item .li-text .text-item .text-item-img img {
   object-fit: cover;
@@ -698,7 +746,14 @@ button {
     background-position: 0 -812px;
   }
 }
-
+@-webkit-keyframes round {
+          0%{
+            background-position: 0 0;
+          }
+          100%{
+            background-position: 0 -812px;
+          }
+        }
 #price .fb .menu-list .menu-item:hover span, #price .fb .menu-list .menu-item.active span {
   animation: round 0.25s steps(14) forwards;
   cursor: pointer;
@@ -870,6 +925,12 @@ footer {
       font-size: 7rem;
     }
   }
+  @-webkit-keyframes txtEffect {
+  100% {
+    opacity: .5;
+    font-size: 10rem;
+  }
+}
   .fade-in {
     transform: translate(0, 50px);
     font-size: 1rem;
@@ -881,6 +942,12 @@ footer {
       opacity: 1;
     }
   }
+  @-webkit-keyframes in {
+  100% {
+    font-size: 1.4rem;
+    opacity: 1;
+  }
+}
   /* -----------   */
   /*   header-tb   */
   /* -----------   */
@@ -1144,6 +1211,12 @@ footer {
     font-size: 1rem;
   }
   @keyframes txtEffect {
+    100% {
+      opacity: .5;
+      font-size: 4rem;
+    }
+  }
+  @-webkit-keyframes txtEffect {
     100% {
       opacity: .5;
       font-size: 4rem;
