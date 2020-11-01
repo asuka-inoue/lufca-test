@@ -876,6 +876,10 @@ button {
   font-weight: bold;
 }
 
+#map .flex .access table tr th a, #map .flex .access table tr td a {
+  color: #fff;
+}
+
 #map .flex .access table tr th p, #map .flex .access table tr td p {
   font-family: "Playfair Display",serif;
 }
