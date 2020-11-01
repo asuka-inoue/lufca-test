@@ -25,7 +25,7 @@ body {
 img, svg {
   width: 100%;
   vertical-align: bottom;
-  filter: drop-shadow(10px 10px 5px #064235);
+/*   filter: drop-shadow(10px 10px 5px #064235); */
 }
 
 a {
