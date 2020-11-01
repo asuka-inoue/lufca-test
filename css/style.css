@@ -698,7 +698,16 @@ button {
   animation: round 0.25s steps(14) forwards;
   cursor: pointer;
 }
- #price .fb .menu-list .menu-item.active span::after {
+ #price .fb .menu-list .menu-item.active {
+  background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
+  width: 58px;
+  height: 58px;
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 40%;
+}
+ #price .fb .menu-list .menu-item.active::after {
   animation: round 0.25s steps(14) forwards;
   cursor: pointer;
 }
