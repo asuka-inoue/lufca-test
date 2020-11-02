@@ -701,20 +701,20 @@ button {
   position: absolute;
   top: 30px;
   left: 40%;
-  display: none;
 }
 
 #price .fb .menu-list .menu-item span img {
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
-#price .fb .menu-list .menu-item:hover span {
+#price .fb .menu-list .menu-item:hover span img {
   display: block;
 }
 
-#price .fb .menu-list .menu-item.active span {
+#price .fb .menu-list .menu-item.active span img {
   display: block;
 }
 
