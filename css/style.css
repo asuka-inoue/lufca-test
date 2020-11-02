@@ -697,7 +697,7 @@ button {
 }
 
 #price .fb .menu-list .menu-item:hover span {
-  animation: round 0.25s steps(14);
+  animation: round 0.25s steps(14) both;
   -webkit-animation: round 0.25s steps(14) both;
   cursor: pointer;
 }
@@ -708,7 +708,7 @@ button {
   height: 58px;
   display: inline-block;
   position: absolute;
-  animation: round 0.25s steps(14);
+  animation: round 0.25s steps(14) both;
   -webkit-animation: round 0.25s steps(14) both;
   cursor: pointer;
 }
