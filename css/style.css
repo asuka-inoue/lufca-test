@@ -61,7 +61,7 @@ a {
 }
 
 @keyframes txtEffect {
-  100% {
+  99.9%, to {
     opacity: .5;
     font-size: 10rem;
   }
@@ -92,7 +92,7 @@ a {
 }
 
 @keyframes in {
-  100% {
+  99.9%, to {
     font-size: 2.3rem;
     opacity: 1;
   }
@@ -307,7 +307,8 @@ button {
 }
 
 .header .header-link .header-nav .nav-item:hover span, .header .header-link .header-nav .nav-item.active span {
-  animation: round 0.25s steps(14) forwards;
+  animation: round 0.25s steps(14) both;
+  -webkit-animation: round 0.25s steps(14) both;
   cursor: pointer;
 }
 
@@ -315,7 +316,7 @@ button {
   0% {
     background-position: 0 0;
   }
-  100% {
+  99.9%, to {
     background-position: 0 -812px;
   }
 }
@@ -399,6 +400,7 @@ button {
   height: 40px;
   background: #000;
   animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
+  -webkit-animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
   border-style: solid;
 }
 
@@ -411,6 +413,7 @@ button {
   border-right: 3px solid transparent;
   margin: auto;
   animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
+  -webkit-animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
 
 @keyframes sdl {
@@ -426,7 +429,7 @@ button {
     transform: scale(1, 1);
     transform-origin: 0 100%;
   }
-  100% {
+  99.9%, to {
     transform: scale(1, 0);
     transform-origin: 0 100%;
   }
@@ -545,7 +548,7 @@ button {
 }
 
 @keyframes in {
-  100% {
+  99.9%, to {
     font-size: 2.4rem;
     opacity: 1;
   }
@@ -694,7 +697,8 @@ button {
 }
 
 #price .fb .menu-list .menu-item:hover span {
-  animation: round 0.25s steps(14) forwards;
+  animation: round 0.25s steps(14);
+  -webkit-animation: round 0.25s steps(14) both;
   cursor: pointer;
 }
 
@@ -704,7 +708,8 @@ button {
   height: 58px;
   display: inline-block;
   position: absolute;
-  animation: round 0.25s steps(14) forwards;
+  animation: round 0.25s steps(14);
+  -webkit-animation: round 0.25s steps(14) both;
   cursor: pointer;
 }
 
@@ -712,7 +717,7 @@ button {
   0% {
     background-position: 0 0;
   }
-  100% {
+  99.9%, to {
     background-position: 0 -812px;
   }
 }
@@ -901,7 +906,7 @@ footer {
     top: 10vh;
   }
   @keyframes txtEffect {
-    100% {
+    99.9%, to {
       opacity: .5;
       font-size: 7rem;
     }
@@ -912,7 +917,7 @@ footer {
     position: relative;
   }
   @keyframes in {
-    100% {
+    99.9%, to {
       font-size: 1.8rem;
       opacity: 1;
     }
@@ -969,8 +974,9 @@ footer {
     font-size: 2rem;
     text-align: center;
   }
-  .header .right .header-link .nav-list .nav-item:active span {
-    animation: round 0.25s steps(14) forwards;
+  .header .right .header-link .nav-list .nav-item .nav-item.active span {
+    animation: round 0.25s steps(14) both;
+    -webkit-animation: round 0.25s steps(14) both;
   }
   .header .right .header-link .nav-list .nav-item:last-of-type {
     margin-bottom: 0;
@@ -1100,7 +1106,8 @@ footer {
     padding-top: 20%;
   }
   #price .fb .menu-list .menu-item.active span {
-    animation: round 0.25s steps(14) forwards;
+    animation: round 0.25s steps(14) both;
+    -webkit-animation: round 0.25s steps(14) both;
     cursor: pointer;
   }
   #price .fb .img-list {
@@ -1140,13 +1147,13 @@ footer {
   #staff {
     padding-top: 25%;
   }
-  #staff .section-inner .img{
-    width: 20%;
-  }
   #staff .section-inner .line {
     font-size: 9rem;
     left: -10vw;
     margin-top: 18%;
+  }
+  #staff .section-inner .img {
+    width: 20%;
   }
   #staff .section-inner .flex .flex-list .flex-item {
     width: 40%;
@@ -1179,13 +1186,13 @@ footer {
     font-size: 1rem;
   }
   @keyframes txtEffect {
-    100% {
+    99.9%, to {
       opacity: .5;
       font-size: 4rem;
     }
   }
   @keyframes in {
-    100% {
+    99.9%, to {
       font-size: 1.4rem;
       opacity: 1;
     }
