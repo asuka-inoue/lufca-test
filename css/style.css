@@ -25,7 +25,7 @@ body {
 img, svg {
   width: 100%;
   vertical-align: bottom;
-  filter: drop-shadow(10px 10px 5px #064235);
+  filter: drop-shadow(5px 5px 5px black);
 }
 
 a {
@@ -183,6 +183,10 @@ button {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.sp-br {
+  display: none;
 }
 
 /* ----------- */
@@ -480,7 +484,11 @@ button {
   padding: 0 3%;
 }
 
-.bg-white .flex .concept-read p span {
+.bg-white .flex .concept-read .read {
+  font-weight: bold;
+}
+
+.bg-white .flex .concept-read .read span {
   font-size: 3.5rem;
 }
 
@@ -694,23 +702,17 @@ button {
   position: absolute;
   top: 30px;
   left: 40%;
+  overflow: hidden;
 }
 
 #price .fb .menu-list .menu-item:hover span {
-  animation: round 0.25s steps(14) both;
+  animation: round 0.25s steps(14);
   -webkit-animation: round 0.25s steps(14) both;
-  cursor: pointer;
 }
 
 #price .fb .menu-list .menu-item.active span {
-  background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
-  width: 58px;
-  height: 58px;
-  display: inline-block;
-  position: absolute;
-  animation: round 0.25s steps(14) both;
+  animation: round 0.25s steps(14);
   -webkit-animation: round 0.25s steps(14) both;
-  cursor: pointer;
 }
 
 @keyframes round {
@@ -772,6 +774,10 @@ button {
   filter: gray;
   filter: grayscale(1);
   transition: .3s;
+}
+
+#staff .section-inner .flex .flex-list .flex-item p {
+  font-weight: bold;
 }
 
 #staff .section-inner .flex .flex-list .flex-item .flex-img {
@@ -1137,6 +1143,9 @@ footer {
     top: 230px;
     width: 40%;
   }
+  #price .fb .fb-item .li-text .text-item p {
+    font-size: 1.1rem;
+  }
   #price .fb .fb-item .li-text .text-item .text-item-img img {
     height: 200px;
     width: 100%;
@@ -1258,9 +1267,6 @@ footer {
   /* ----------- */
   /*   price-sp  */
   /* ----------- */
-  #price .section-inner {
-    padding: 0 10px;
-  }
   #price .price {
     top: 1vh;
   }
@@ -1274,8 +1280,16 @@ footer {
     left: 33%;
     top: 4px;
   }
+  #price .fb .fb-item {
+    width: 50%;
+    margin: 0;
+  }
+  #price .fb .fb-item .scissors {
+    width: 15%;
+  }
   #price .fb .fb-item .li-text .text-item {
     top: 145px;
+    width: 50%;
   }
   #price .fb .fb-item .li-text .text-item .text-item-img img {
     object-fit: cover;
@@ -1284,7 +1298,10 @@ footer {
     max-height: 130px;
   }
   #price .fb .fb-item .li-text .text-item p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  #price .fb .fb-item .li-text .text-item p .sp-br {
+    display: block;
   }
   #price .fb .img-list .img-item::before {
     height: 100%;
