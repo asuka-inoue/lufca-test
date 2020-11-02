@@ -695,33 +695,27 @@ button {
 }
 
 #price .fb .menu-list .menu-item span {
-  background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
   width: 58px;
   height: 58px;
   display: inline-block;
   position: absolute;
   top: 30px;
   left: 40%;
-  overflow: hidden;
+  display: none;
+}
+
+#price .fb .menu-list .menu-item span img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #price .fb .menu-list .menu-item:hover span {
-  animation: round 0.25s steps(14);
-  -webkit-animation: round 0.25s steps(14) both;
+  display: block;
 }
 
 #price .fb .menu-list .menu-item.active span {
-  animation: round 0.25s steps(14);
-  -webkit-animation: round 0.25s steps(14) both;
-}
-
-@keyframes round {
-  0% {
-    background-position: 0 0;
-  }
-  99.9%, to {
-    background-position: 0 -812px;
-  }
+  display: block;
 }
 
 /* ----------- */
