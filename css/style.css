@@ -695,6 +695,7 @@ button {
 }
 
 #price .fb .menu-list .menu-item span {
+  background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
   width: 58px;
   height: 58px;
   display: inline-block;
@@ -710,12 +711,31 @@ button {
   display: none;
 }
 
+#price .fb .menu-list .menu-item:hover span {
+  animation: round 0.25s steps(14);
+  -webkit-animation: round 0.25s steps(14) both;
+}
+
 #price .fb .menu-list .menu-item:hover span img {
-  display: block;
+  display: none;
+}
+
+#price .fb .menu-list .menu-item.active span {
+  animation: round 0.25s steps(14);
+  -webkit-animation: round 0.25s steps(14) both;
 }
 
 #price .fb .menu-list .menu-item.active span img {
-  display: block;
+  display: none;
+}
+
+@keyframes round {
+  0% {
+    background-position: 0 0;
+  }
+  99.9%, to {
+    background-position: 0 -812px;
+  }
 }
 
 /* ----------- */
@@ -1105,10 +1125,8 @@ footer {
   #price .fb .menu-list {
     padding-top: 20%;
   }
-  #price .fb .menu-list .menu-item.active span {
-    animation: round 0.25s steps(14) both;
-    -webkit-animation: round 0.25s steps(14) both;
-    cursor: pointer;
+  #price .fb .menu-list .menu-item.active span img {
+    display: block;
   }
   #price .fb .img-list {
     margin-top: 0;
