@@ -1156,7 +1156,7 @@ footer {
     position: absolute;
     right: 0;
   }
-  #price .fb .fb-item .li-text .tab_hidden .slick-list draggable {
+  #price .fb .fb-item .li-text .tab_hidden .slick-track {
     height: 0;
   }
   #price .fb .fb-item .li-text .text-item {
