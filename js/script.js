@@ -105,3 +105,33 @@ function stopload(){
     bg.classList.add('fadeout-bg');
     loader.classList.add('fadeout-loader');
 }
+
+// スライダー
+$(function() {
+  var mainSlider = '.slider-for'; //メインスライダー
+ var thumbnailSlider = '.slider-nav'; //サムネイルスライダー
+  $(mainSlider).slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: thumbnailSlider
+  });  
+  $(thumbnailSlider).slick({
+    slidesToShow: 3,
+    asNavFor: mainSlider,
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: '12%',
+    arrows: true
+  }); 
+
+  $(thumbnailSlider + '.slick-slide').on('click',function(){
+    var index = $(this).attr('data-slick-index');
+    $(thumbnailSlider).slick('slickGoTo',index,false);
+  });
+//   $(mainSlider).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+//     if ($(thumbnailSlider).length < 4) {
+//         $(thumbnailSlider).slick('slickSetOption', 'centerMode', true, true);
+//     }
+// });
+});
