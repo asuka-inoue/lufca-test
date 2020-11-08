@@ -116,6 +116,10 @@ button {
   appearance: none;
 }
 
+.sp-slider {
+  display: none;
+}
+
 /* 非表示 */
 .is-hide {
   display: none;
@@ -1127,7 +1131,6 @@ footer {
   }
   #price .fb .menu-list .menu-item.active span img {
     display: block;
-    filter: none;
   }
   #price .fb .img-list {
     margin-top: 0;
@@ -1219,6 +1222,10 @@ footer {
       opacity: 1;
     }
   }
+  .sp-slider {
+    display: block;
+    margin-top: 55%;
+  }
   /* ----------- */
   /*  header-sp   */
   /* ----------- */
@@ -1280,18 +1287,31 @@ footer {
   /* ----------- */
   /*   price-sp  */
   /* ----------- */
+  #price .section-inner {
+    padding: 0 10px;
+  }
   #price .price {
     top: 1vh;
   }
+  #price .color, #price .headspa {
+    margin-top: 35%;
+  }
+  #price .treatment {
+    margin-top: -2%;
+  }
   #price .fb .menu-list {
-    padding-top: 40%;
+    padding-top: 0;
   }
   #price .fb .menu-list .menu-item {
     font-size: 2.5rem;
+    margin-bottom: 15%;
   }
   #price .fb .menu-list .menu-item span {
     left: 33%;
     top: 4px;
+  }
+  #price .fb .sp-menu {
+    width: 40%;
   }
   #price .fb .fb-item {
     width: 50%;
@@ -1301,14 +1321,11 @@ footer {
     width: 15%;
   }
   #price .fb .fb-item .li-text .text-item {
-    top: 145px;
-    width: 50%;
+    top: 0;
+    width: 55%;
   }
   #price .fb .fb-item .li-text .text-item .text-item-img img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    max-height: 130px;
+    display: none;
   }
   #price .fb .fb-item .li-text .text-item p {
     font-size: 1rem;
@@ -1316,27 +1333,49 @@ footer {
   #price .fb .fb-item .li-text .text-item p .sp-br {
     display: block;
   }
-  #price .fb .img-list .img-item::before {
-    height: 100%;
-  }
-  #price .fb .img-list .img-item img {
+  #price .fb .fb-item .li-text .text-item .slider-for img {
+    height: 200px;
     object-fit: cover;
-    width: 100%;
+  }
+  #price .fb .fb-item .li-text .text-item .slick-prev {
+    position: absolute;
+    left: 28%;
+    bottom: 0;
+  }
+  #price .fb .fb-item .li-text .text-item .slick-next {
+    position: absolute;
+    right: 26%;
+    bottom: 0;
+  }
+  #price .fb .fb-item .li-text .text-item .slick-list {
+    position: relative;
+    text-align: center;
+  }
+  #price .fb .fb-item .li-text .text-item .slick-list .slick-current {
+    font-size: 2.5rem;
+    outline: none;
+  }
+  #price .img-list .img-item::before {
     height: 100%;
-    max-height: 130px;
   }
-  /* ----------- */
-  /*   staff-sp  */
-  /* ----------- */
-  #staff {
-    padding-top: 40%;
+  #price .img-list .img-item img {
+    display: none;
   }
-  #staff .section-inner {
-    margin-left: 15%;
-  }
-  #staff .section-inner .line {
-    font-size: 6rem;
-    margin-top: 15%;
-  }
+}
+
+/* ----------- */
+/*   staff-sp  */
+/* ----------- */
+#staff {
+  padding-top: 10%;
+}
+
+#staff .section-inner {
+  margin-left: 15%;
+}
+
+#staff .section-inner .line {
+  font-size: 6rem;
+  margin-top: 15%;
 }
 /*# sourceMappingURL=style.css.map */
