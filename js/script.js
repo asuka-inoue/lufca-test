@@ -110,6 +110,12 @@ function stopload(){
 $(function() {
   var mainSlider = '.slider-for'; //メインスライダー
  var thumbnailSlider = '.slider-nav'; //サムネイルスライダー
+ var thumbnailItem = '.slider-nav .slick-slide';
+ $(thumbnailItem).each(function(){
+   var index = $(thumbnailItem).index(this);
+   $(this).attr('data-index',index);
+ });
+
   $(mainSlider).slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -125,13 +131,15 @@ $(function() {
     arrows: true
   }); 
 
-  $(thumbnailSlider + '.slick-slide').on('click',function(){
+  $(thumbnailItem).on('click',function(){
     var index = $(this).attr('data-slick-index');
     $(thumbnailSlider).slick('slickGoTo',index,false);
   });
-//   $(mainSlider).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-//     if ($(thumbnailSlider).length < 4) {
-//         $(thumbnailSlider).slick('slickSetOption', 'centerMode', true, true);
-//     }
-// });
+
+  $(mainSlider).on('beforeChange',function(event,slick,currentSlide,nextSlide){
+    $(thumbnailItem).each(function(){
+      $(this).removeClass('thumbnail-current');
+    });
+    $(thumbnailItem+'[data-index="'+nextSlide+'"]').addClass("thumbnail-current");
+  });
 });
