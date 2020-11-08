@@ -1131,6 +1131,7 @@ footer {
   }
   #price .fb .menu-list .menu-item.active span img {
     display: block;
+    filter: none;
   }
   #price .fb .img-list {
     margin-top: 0;
