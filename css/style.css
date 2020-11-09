@@ -1294,6 +1294,9 @@ footer {
   #price .section-inner {
     padding: 0 10px;
   }
+  #price .pc-hr {
+    display: none;
+  }
   #price .price {
     top: 1vh;
   }
@@ -1355,9 +1358,18 @@ footer {
     position: relative;
     text-align: center;
   }
+  #price .fb .fb-item .li-text .text-item .slick-list .slick-slide p {
+    font-size: 1.5rem;
+  }
   #price .fb .fb-item .li-text .text-item .slick-list .slick-current {
-    font-size: 2.5rem;
     outline: none;
+  }
+  #price .fb .fb-item .li-text .text-item .slick-list .slick-current p {
+    font-size: 2.5rem;
+  }
+  #price .fb .fb-item .li-text .text-item .slick-list .slick-current p:before {
+    content: 'No.';
+    font-size: 2.5rem;
   }
   #price .img-list .img-item::before {
     height: 100%;
