@@ -308,15 +308,15 @@ button {
 .header .header-link .header-nav .nav-item a span {
   width: 58px;
   height: 58px;
-  background: url("https://www.millor.jp/assets/images/common/current.png");
+  background: url("../images/check.png") no-repeat;
   position: absolute;
-  top: -15px;
-  left: -5px;
+  top: -13px;
+  left: -12px;
 }
 
 .header .header-link .header-nav .nav-item:hover span, .header .header-link .header-nav .nav-item.active span {
-  animation: round 0.25s steps(14) both;
-  -webkit-animation: round 0.25s steps(14) both;
+  animation: round 0.25s steps(10) both;
+  -webkit-animation: round 0.25s steps(10) both;
   cursor: pointer;
 }
 
@@ -325,7 +325,7 @@ button {
     background-position: 0 0;
   }
   99.9%, to {
-    background-position: 0 -812px;
+    background-position: 0 -580px;
   }
 }
 
@@ -699,7 +699,7 @@ button {
 }
 
 #price .fb .menu-list .menu-item span {
-  background: url("https://www.millor.jp/assets/images/common/current.png") no-repeat;
+  background: url("../images/check.png") no-repeat;
   width: 58px;
   height: 58px;
   display: inline-block;
@@ -716,8 +716,8 @@ button {
 }
 
 #price .fb .menu-list .menu-item:hover span {
-  animation: round 0.25s steps(14);
-  -webkit-animation: round 0.25s steps(14) both;
+  animation: round 0.25s steps(10);
+  -webkit-animation: round 0.25s steps(10) both;
 }
 
 #price .fb .menu-list .menu-item:hover span img {
@@ -725,22 +725,15 @@ button {
 }
 
 #price .fb .menu-list .menu-item.active span {
-  animation: round 0.25s steps(14);
-  -webkit-animation: round 0.25s steps(14) both;
+  animation: round 0.25s steps(10);
+  -webkit-animation: round 0.25s steps(10) both;
 }
 
 #price .fb .menu-list .menu-item.active span img {
   display: none;
 }
 
-@keyframes round {
-  0% {
-    background-position: 0 0;
-  }
-  99.9%, to {
-    background-position: 0 -812px;
-  }
-}
+
 
 /* ----------- */
 /*    staff    */
