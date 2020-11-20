@@ -306,12 +306,12 @@ button {
 }
 
 .header .header-link .header-nav .nav-item a span {
-  width: 58px;
-  height: 58px;
+  width: 90px;
+  height: 100px;
   background: url("../images/check.png") no-repeat;
   position: absolute;
-  top: -13px;
-  left: -12px;
+  top: -35px;
+  left: -30px;
 }
 
 .header .header-link .header-nav .nav-item:hover span, .header .header-link .header-nav .nav-item.active span {
@@ -325,7 +325,7 @@ button {
     background-position: 0 0;
   }
   99.9%, to {
-    background-position: 0 -580px;
+    background-position: 0 -1000px;
   }
 }
 
@@ -700,12 +700,12 @@ button {
 
 #price .fb .menu-list .menu-item span {
   background: url("../images/check.png") no-repeat;
-  width: 58px;
-  height: 58px;
+  width: 90px;
+  height: 100px;
   display: inline-block;
   position: absolute;
-  top: 30px;
-  left: 40%;
+  top: 5px;
+  left: 35%;
 }
 
 #price .fb .menu-list .menu-item span img {
@@ -1307,6 +1307,9 @@ footer {
     margin-bottom: 15%;
   }
   #price .fb .menu-list .menu-item span {
+    background: none;
+    width: 58px;
+    height: 58px;
     left: 33%;
     top: 4px;
   }
